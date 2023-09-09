@@ -136,7 +136,64 @@ Welcome to my GitHub repository dedicated to VLSI Physical Design for ASICs usin
   - Routing topology algorithm and final files list post-route
 
 
+# DAY 1 
 
+## Inception of open-source EDA, OpenLANE and Sky130 PDK
+
+<details>
+<summary> How to talk to computers </summary>
+
+Lets take an example of an Arduino Board,An Arduino board is a small computer that you can use to control and interact with electronic devices. It's a physical platform that allows you to write and upload programs (called "sketches") to make things like lights, motors, sensors, and other components work together.
+we take an Arduino board since we will be working with something similar, **we will be talking about a field which is lying inside the chip shown below**:
+
+
+
+- if we want to desgin this particular Arduino board, we can describe it in a form of a block diagram shown below:
+
+
+
+- the highlighted area of the chip is nothing but the processor shown above and along with the processors we have all the interfaces that we see around the particular processor.
+- This is the typical arduino board diagram looks like.
+
+we wont be talking about the embedded desgin and rather will be looking into the chip desgining.
+
+when we open up the IC it looks something like this shown below:
+
+
+
+what we see above is usually what we call a **chip**, but its known as a **PACKAGE**, these packages have been assigned with certain names for ex: we see that the above package is named QNF-48
+similarly there are multiple packages in the market with different flavours and pins.
+- Here the pin loacations of the particular package are all given by the particular arduino board.
+- the package seen above has a size of 7mm x 7mm
+
+- the main heart of the package the chip sits in the middle of the package and the way the chip is connected to the package is shown below:
+
+
+
+- Here we have use **wire bounds** to connect the pins to the boundaries of the Chip, In this way we are able to transfer all the signal from outside world into the chip.
+
+When we Open the chip it looks like this shown below:
+
+
+
+- The chip that is shown above has many various components and one of the Important componants is the **PADs**.
+- **PADs** in a chip are like the little metal feet or points on the bottom of the chip. They're used to connect the chip to a circuit through which we can send the outside signal into the chip so it can do its job.
+- the Middle free space area seen above inside is known as the **Core** of the chip.
+- **core** of a chip is like the brain of the chip. It's the central part that does most of the actual thinking and processing of information.Its a place where all our Digital logical sits,ex:AND gate,OR gate,MUXs,etc.
+- the size of the chip is known as the **Die**.
+- **die** is like the heart of a computer chip. It's a tiny, flat piece of silicon that contains the actual electronic circuits. It's where all the important computations and operations happen.This the Die that gets manufactured on the **Silicon Wafer**.
+
+
+The typical **Core** of a CHIP consists of an SoC(we will be working with RISC-V SoC),SRAM,ADCs,DACs,PLL,SPI and couple of components shown below:
+
+
+
+- these SRAM,ADC,DAC,PLL all together are known As **Foundry IP's(Intellectual Properties)**
+- **Foundry** is an important term in chip Designing Chips, all our devices,mobiles,everything is depended on the Foundry's.
+- Foundry is a place where the chips are manufactured, Foundry's are set of machines that we communicate with.
+- The digital Blocks placed the SRAM and the SPI are basically called as **Macros**.
+
+</details>
 
 
 
