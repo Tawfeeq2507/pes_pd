@@ -148,11 +148,11 @@ Welcome to my GitHub repository dedicated to VLSI Physical Design for ASICs usin
 Lets take an example of an Arduino Board,An Arduino board is a small computer that you can use to control and interact with electronic devices. It's a physical platform that allows you to write and upload programs (called "sketches") to make things like lights, motors, sensors, and other components work together.
 we take an Arduino board since we will be working with something similar, **we will be talking about a field which is lying inside the chip shown below**:
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/0783c87c-1949-4fa8-8a9b-b6fb487ad22c)
 
 - if we want to desgin this particular Arduino board, we can describe it in a form of a block diagram shown below:
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/5f0aa3ef-2b05-414d-9234-ddc4d438b5ec)
 
 - the highlighted area of the chip is nothing but the processor shown above and along with the processors we have all the interfaces that we see around the particular processor.
 - This is the typical arduino board diagram looks like.
@@ -161,21 +161,21 @@ we wont be talking about the embedded desgin and rather will be looking into the
 
 when we open up the IC it looks something like this shown below:
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/049a19cc-766c-46f6-9879-ca05b3c9ae8b)
 
 what we see above is usually what we call a **"chip"**, but its known as a **"PACKAGE"**, these packages have been assigned with certain names for ex: we see that the above package is named **"QNF-48"**.Similarly there are multiple packages in the market with different flavours and pins.
 - Here the pin loacations of the particular package are all given by the particular arduino board.
 - the package seen above has a size of 7mm x 7mm
 
-- the main heart of the package the chip sits in the middle of the package and the way the chip is connected to the package is shown below:
+- the main Brain of the package the chip sits in the middle of the package and the way the chip is connected to the package is shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/9ff58809-bd74-41fa-9043-cb09f788ed90)
 
-
-- Here we have use **"wire bounds"** to connect the pins to the boundaries of the Chip, In this way we are able to transfer all the signal from outside world into the chip.
+- Here we have used **"wire bounds"** to connect the pins to the boundaries of the Chip, In this way we are able to transfer all the signal from outside world into the chip.
 
 When we Open the chip it looks like this shown below:
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/f90561ac-8bc0-4f3f-9ab0-6c4cf846bb62)
 
 - The chip that is shown above has many various components and one of the Important componants is the **"PADs"**.
 - **"PADs"** in a chip are like the little metal feet or points on the bottom of the chip. They're used to connect the chip to a circuit through which we can send the outside signal into the chip so it can do its job.
@@ -184,15 +184,14 @@ When we Open the chip it looks like this shown below:
 - the size of the chip is known as the **"Die"**.
 - **"Die"** is like the heart of a computer chip. It's a tiny, flat piece of silicon that contains the actual electronic circuits. It's where all the important computations and operations happen.This the Die that gets manufactured on the **"Silicon Wafer"**.
 
-
 The typical **Core** of a CHIP consists of an SoC(we will be working with RISC-V SoC),SRAM,ADCs,DACs,PLL,SPI and couple of components shown below:
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/e88f8c8a-3d09-4555-8b92-89a7bb29b5e9)
 
 - these SRAM,ADC,DAC,PLL all together are known As **"Foundry IP's(Intellectual Properties)"**
 - **Foundry** is an important term in chip Designing Chips, all our devices,mobiles,everything is depended on the Foundry's.
 - Foundry is a place where the chips are manufactured, Foundry's are set of machines that we communicate with.
-- The digital Blocks placed the SRAM and the SPI are basically called as **"Macros"**.
+- The digital Blocks placed the SoC and the SPI are basically called as **"Macros"**.
 
 </details>
 
