@@ -67,12 +67,12 @@ Welcome to my GitHub repository dedicated to VLSI Physical Design for ASICs usin
   - Switching Threshold Vm
   - Static and dynamic simulation of CMOS inverter
   - Lab steps to git clone vsdstdcelldesign 
-+ Inception of Layout Â CMOS fabrication process
++ Inception of Layout A CMOS fabrication process
   - Create Active regions 
   - Formation of N-well and P-well
   - Formation of gate terminal 
   - Lightly doped drain (LDD) formation
-  - Source Â drain formation 
+  - Source A drain formation 
   - Local interconnect formation 
   - Higher level metal formation 
   - Lab introduction to Sky130 basic layers layout and LEF using inverter
@@ -122,8 +122,8 @@ Welcome to my GitHub repository dedicated to VLSI Physical Design for ASICs usin
 
 **Final steps for RTL2GDS using tritonRoute and openSTA**
 + Routing and design rule check (DRC)
-  - Introduction to Maze Routing Â LeeÂs algorithm
-  - LeeÂs Algorithm conclusion
+  - Introduction to Maze Routing A LeeAs algorithm
+  - LeeAs Algorithm conclusion
   - Design Rule Check 
 + Power Distribution Network and routing
   - Lab steps to build power distribution network 
