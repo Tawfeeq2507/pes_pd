@@ -193,12 +193,6 @@ The typical **Core** of a CHIP consists of an SoC(we will be working with RISC-V
 - Foundry is a place where the chips are manufactured, Foundry's are set of machines that we communicate with.
 - The digital Blocks placed the SoC and the SPI are basically called as **"Macros"**.
 
-</details>
-
-
-<details>
-<summary> Inroduction to RISC-V </summary>
-
 #### What is RISC-V?
 **"RISC-V intruction set architecture"** popularly known as **"ISA"**.It is nothing but a language of the computer,a way through which we are able to talk and communicate with the computers.RISC-V is an open-source instruction set architecture (ISA) based on established reduced instruction set computing (RISC) principles. An instruction set architecture is essentially the set of instructions that a computer's processor can execute. 
 
@@ -238,6 +232,16 @@ There are two main types of HDLs:
 
 
 
-  
+
+
+
+
+
+
+
+
+
+
 </details>
+
 
