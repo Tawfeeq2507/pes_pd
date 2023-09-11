@@ -269,27 +269,15 @@ RTL stands for Register-Transfer Level. It's a level of abstraction used in digi
 
 - Our hardware only understands 1's and 0's therefore we need An RTL which implements the output of the assembly language that is the machine language into the Hardware.This is known as the RTL implementation of our instruction set.
 - This RTL is then Synthesized into a Netlist, where this Synthesized Netlist of the RTL consists of Gates,flip flops,inverters,MUX's,etc.
-- and from this Synthesized Netlist to hardware is **Physical design implementation of the Netlist**
+- and from this Synthesized Netlist to hardware is **Physical design implementation of the Netlist**.
 
+</details>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<details>
+<summary> SoC design and OpenLANE </summary>
 
 
 
 
 
 </details>
-
-
