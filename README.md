@@ -235,7 +235,7 @@ Any **application software** or aka **"Apps"** run on **Hardware**... but how do
 - The syntax of these instructions depends on what kind of the hardware is,(ex if the hardware is for intel x86 then the instructions will be of intel x86 only).
 - all these instructions all together form the **.exe file**
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/79883606-8f16-453f-a8e0-7ace2b93f68f)
 
 - The job of the **"Assembler"** is to take these instructions and convert it into its respective binary numbers aka **Machine language** program.
 - These binary numbers aka machine language is then fed to the hardware, where hardware understands the type of pattern of the machine language and does the respective operation.
@@ -248,13 +248,13 @@ lets take an example of a application of "stop watch".
 - these intructions go into the assembler as a .exe file which gives the output in form of machine language.
 - these hexadecimals are converted into binary before entering into the hardware.
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/cd3ff2fc-9fd5-4a77-b1f2-4daa50b6ba1f)
 
 - in general terms these binary numbers are entering into the chip layout and the functions are performed in this layout.
 
 when we take a much deeper look into the program we try to understand the RISC-V intrucstions-
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/ac8b1be7-b508-4ee6-915e-243c495668cf)
 
 - here we see that in left we have the input to the compiler,in the left we have the output of the compiler and the output of the assembler is in hexadecimal in the middle we have assembler output.
 - the instructions after the compiler acts as an **"Abstract interface"** between the C language and the hardware, this Abstract interface is called as the **"Instruction set architecture"** or **"Architecture of the computer"**,in the case shown above its the RISC-V architecture.
@@ -265,7 +265,9 @@ There is another inteface between the Assembly language and the hardware which i
 
 RTL stands for Register-Transfer Level. It's a level of abstraction used in digital circuit design and describes how data moves between registers and how operations are performed on that data.In RTL design, the behavior of the digital system is defined by describing how data is transferred between registers and how operations are performed on that data. This is typically done using a hardware description language (HDL) like Verilog or VHDL.
 
-- Our hardware only understands 1's and 0's therefore we need An RTl which implements the output of the assembly language that is the machine language into the Hardware.This is known as the RTL implementation of our instruction set.
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/52f5c6ce-ea1a-4bf8-8b89-dc223163f440)
+
+- Our hardware only understands 1's and 0's therefore we need An RTL which implements the output of the assembly language that is the machine language into the Hardware.This is known as the RTL implementation of our instruction set.
 - This RTL is then Synthesized into a Netlist, where this Synthesized Netlist of the RTL consists of Gates,flip flops,inverters,MUX's,etc.
 - and from this Synthesized Netlist to hardware is **Physical design implementation of the Netlist**
 
