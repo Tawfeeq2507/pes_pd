@@ -223,7 +223,8 @@ There are two main types of HDLs:
 
 - To Implement these RISC-V specifications we need **RTL(Register-Transfer Level)**,in this case shown below the RTL used is **picorv32 cpu core**
 
-![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/0efc386b-5894-4934-af83-0712a6144cf3)
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/f8e12d12-72af-4d9a-b951-14769924a11f)
+
 
 - this RTL implments these RISC-V specifications.
 - and from here its RTL-GDS flow
