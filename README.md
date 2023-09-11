@@ -223,6 +223,52 @@ There are two main types of HDLs:
 - this RTL implments these RISC-V specifications.
 - and from here its RTL-GDS flow
 
+### From Software Applications to Hardware 
+
+Any **application software** or aka **"Apps"** run on **Hardware**... but how does this happen??
+
+- First the Application software enters the Blocks called the **System Software**,where the system software intern converts the application program into the binary language.
+- the Major components of **"System Software"** concists of the OS(Operating system),Assembler,compiler.
+- The **"Opertaing system:** handles lots of things, it handles the IO operations,allocate memory, low level system functions, OS also helps in taking the application program and converting it into its respective assembly language and finally inot binary program that is understood by the hardware.
+- The output of the OS are nothing but small functions in the given programs(C++,Java,C,python,etc).
+- these are taken by the respective **Compiler** and then converted into intstructions.
+- The syntax of these instructions depends on what kind of the hardware is,(ex if the hardware is for intel x86 then the instructions will be of intel x86 only).
+- all these instructions all together form the **.exe file**
+
+
+
+- The job of the **"Assembler"** is to take these instructions and convert it into its respective binary numbers aka **Machine language** program.
+- These binary numbers aka machine language is then fed to the hardware, where hardware understands the type of pattern of the machine language and does the respective operation.
+
+This is the flow how the application software runs through many different layers before entering the hardware.
+
+lets take an example of a application of "stop watch".
+
+- the C program for the stop watch enters the compiler and the output of the compiler will be intructions based on the type of the hardware(ex RISC-V) therefore the instructions will be of RISC-V.
+- these intructions go into the assembler as a .exe file which gives the output in form of machine language.
+- these hexadecimals are converted into binary before entering into the hardware.
+
+
+
+- in general terms these binary numbers are entering into the chip layout and the functions are performed in this layout.
+
+when we take a much deeper look into the program we try to understand the RISC-V intrucstions-
+
+
+
+- here we see that in left we have the input to the compiler,in the left we have the output of the compiler and the output of the assembler is in hexadecimal in the middle we have assembler output.
+- the instructions after the compiler acts as an **"Abstract interface"** between the C language and the hardware, this Abstract interface is called as the **"Instruction set architecture"** or **"Architecture of the computer"**,in the case shown above its the RISC-V architecture.
+
+There is another inteface between the Assembly language and the hardware which is known as the **HDL(Hardware discriptive language**.
+
+#### What is RTL?
+
+RTL stands for Register-Transfer Level. It's a level of abstraction used in digital circuit design and describes how data moves between registers and how operations are performed on that data.In RTL design, the behavior of the digital system is defined by describing how data is transferred between registers and how operations are performed on that data. This is typically done using a hardware description language (HDL) like Verilog or VHDL.
+
+- Our hardware only understands 1's and 0's therefore we need An RTl which implements the output of the assembly language that is the machine language into the Hardware.This is known as the RTL implementation of our instruction set.
+- This RTL is then Synthesized into a Netlist, where this Synthesized Netlist of the RTL consists of Gates,flip flops,inverters,MUX's,etc.
+- and from this Synthesized Netlist to hardware is **Physical design implementation of the Netlist**
+
 
 
 
