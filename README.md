@@ -196,4 +196,47 @@ The typical **Core** of a CHIP consists of an SoC(we will be working with RISC-V
 </details>
 
 
+<details>
+<summary> Inroduction to RISC-V </summary>
+
+#### What is RISC-V?
+**"RISC-V intruction set architecture"** popularly known as **"ISA"**.It is nothing but a language of the computer,a way through which we are able to talk and communicate with the computers.RISC-V is an open-source instruction set architecture (ISA) based on established reduced instruction set computing (RISC) principles. An instruction set architecture is essentially the set of instructions that a computer's processor can execute. 
+
+For a C program to run on a computer hardware which has got a particular Layout(qFlow), where this layout is nothing but interior of a chip present inside our devices,There are certain flow to pass the C program to the layout.
+
+
+
+- here the C program is first compiled in its assembly language program which is nothing but the RISC-V assembly language program.
+- this Aseembly language program is then converted into machine language program aka the binary language program(ie: 1's and 0's) which is understood by the hardware of the computer.
+- here the codes in hexadecimal format but in real term they are in binary format, therefore this needs to be converted into binary format.
+- after converting these bits gets finnaly executed in the layout and get the required output.
+
+
+Another layer present betweeen the C pragram and the layout is the **"HDL(Hardware discriptive language)"**.
+
+#### What is HDL?
+**"HDL"** stands for **Hardware Description Language**. It's a specialized programming language used to describe the structure and behavior of electronic circuits and systems. HDLs are used in the design, simulation, and synthesis of digital circuits, such as those found in microprocessors, memory chips, and other integrated circuits.
+There are two main types of HDLs:
+ 1)**Verilog**: Developed by Phil Moorby and Prabhu Goel in the 1980s
+ 2)**VHDL (VHSIC Hardware Description Language)**:Developed by the U.S. Department of Defense in the 1980s
+
+
+- To Implement these RISC-V specifications we need **RTL(Register-Transfer Level)**,in this case shown below the RTL used is **picorv32 cpu core**
+
+img
+
+- this RTL implments these RISC-V specifications.
+- and from here its RTL-GDS flow
+
+
+
+
+
+
+
+
+
+
+  
+</details>
 
