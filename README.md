@@ -304,7 +304,7 @@ RTL stands for Register-Transfer Level. It's a level of abstraction used in digi
 
 The simplified RTL to GDS2 flow shown below starts from RTL model and ends with the readied fabricate masked set layout in the GDS 2 format:
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/35deba59-3088-454f-86c8-e1733b02289f)
 
 - From above the Major implementation Steps are:
 
@@ -320,13 +320,13 @@ The simplified RTL to GDS2 flow shown below starts from RTL model and ends with 
 - Its the first major step in a typical ASIC flow is the Synthesis.
 - In Synthesis Design RTL is translated into Circuits made out of components from standard Cell Library(SCL).
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/9c66b611-e157-4d34-bd01-39fabcb905a1)
 
 - The resulted circuit is described in HDL(Hardware descriptive language) usually referred to as gate level Netlist.
 - The Gate level Netlist is functionally equivalent to RTL.
 - The Library building blocks or the cells have regular layout,Typically the cell Layout is enclosed by fixed hieght standard.
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/043a92e1-9929-4d14-92af-be6c14886769)
 
 - The cell width is variable but its Discrete.
 - Each cell comes with different models/views utilized by different EDA Tools
@@ -339,44 +339,43 @@ The simplified RTL to GDS2 flow shown below starts from RTL model and ends with 
 - The Objective here is to plan the silicon area and create Robust power Distribution Network to power the circuits.
 - In **CHIP FLOOR PLANNING** the Chip Die is partitioned between different chip components.
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/31295871-26ec-467c-b40d-7191cfc250e2)
 
 - in **MACRO FLOOR PLANNING** we define the Macro dimensions and its pin locations and also Routing tracks and Rows are defined,Which will be used later during the placement and routing steps.
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/1cd2f5ec-10e5-4e6c-8a52-dd06397c436f)
 
 - In **POWER PLANNING** the power Network is constructed,typically its chip is powered by multiple VDD and Ground Pins.
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/aac140a2-dc0f-493b-9963-766849970872)
 
 - The Power pins are connected to all components through Power rings and vertical and horizontal metal Power Straps.
 - Such parallel structures are meant to reduce the resistance.
 - Typically the Power distribution Network uses Upper metal layers as they are thicker than lower metal Layers,Hence they have less resistance.
-
 
 ##### 3) PLACEMENT:
 
 - This is the 3rd step in ASIC design flow it is the placement for Macros.
 - We place the Gate level Netlist cells on the vertical Rows, connected cells must be placed very closed to each other to reduce the inter connect delay and also to enable successful routing afterwards.
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/5f3d41fa-057c-4f10-9cde-1a9c2b81d790)
 
 - Cell Placement is done in 2 steps:
   - Global placements
   - Detailed placements.
 - **Global placements** tries to find optimal postions for OR cells such positions are not nessecerily legal so cells may overlap or Go off Rows
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/ca85947d-d212-4dea-b1de-afd9ddd1b35d)
 
 - In **Detailed placements** positions obrained by global placements are minimally altered to be legal.
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/f759cd33-413e-4199-8feb-86d489060552)
 
 ##### 4) CLOCK TREE SYNTHESIS (CTS):
 
 - This is 4th step in ASIC flow design is the Clock tree synthesis, before the routing the signals we need to route the clock by creating clock distribution Network to deliver the clock to all clock cells ex(Flip-Flops).
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/34e9e0eb-b116-4e60-b9a3-e759d1cf431c)
 
 - The clock network looks like a tree where the clock source is the Roots and the clock elements are the end leaves.
 - The clock tree is synthesized to deliver the clock to all cells in a good shape with minimum skew and minimum latency.
