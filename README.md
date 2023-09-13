@@ -367,7 +367,7 @@ The simplified RTL to GDS2 flow shown below starts from RTL model and ends with 
 
 ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/ca85947d-d212-4dea-b1de-afd9ddd1b35d)
 
-- In **Detailed placements** positions obrained by global placements are minimally altered to be legal.
+- In **Detailed placements** positions obtained by global placements are minimally altered to be legal.
 
 ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/f759cd33-413e-4199-8feb-86d489060552)
 
