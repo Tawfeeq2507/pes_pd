@@ -363,7 +363,7 @@ The simplified RTL to GDS2 flow shown below starts from RTL model and ends with 
 - Cell Placement is done in 2 steps:
   - Global placements
   - Detailed placements.
-- **Global placements** tries to find optimal postions for OR cells such positions are not nessecerily legal so cells may overlap or Go off Rows
+- **Global placements** tries to find optimal postions for cells such positions are not nessecerily legal so cells may overlap or Go off Rows
 
 ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/ca85947d-d212-4dea-b1de-afd9ddd1b35d)
 
