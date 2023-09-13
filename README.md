@@ -276,7 +276,7 @@ RTL stands for Register-Transfer Level. It's a level of abstraction used in digi
 <details>
 <summary> SoC design and OpenLANE </summary>
 
-### Introduction to all components of open-source digital asic design
+### Introduction to all components of open-source Digital ASIC Design
 
 - To implement Digital ASIC design we require certain elements these elements are RTL IP's,EDA Tools,PDK data.
 
