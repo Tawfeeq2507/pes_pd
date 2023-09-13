@@ -383,6 +383,9 @@ The simplified RTL to GDS2 flow shown below starts from RTL model and ends with 
 
 ##### 5) ROUTING:
 
+- This is the 5th step in ASIC Design Flow known as the Routing.
+- After Routing the Clock comes the signal Routing, Given the placements and fixed number of metal layers it is required to find a valid pattern of horizontal and vertical wires to implement the Nets that connects the cells together.
+- The Router 
 
 
 
