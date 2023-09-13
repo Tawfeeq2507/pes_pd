@@ -316,6 +316,7 @@ The simplified RTL to GDS2 flow shown below starts from RTL model and ends with 
   - Sign off
 
 ##### 1) SYNTHESIS:
+
 - Its the first major step in a typical ASIC flow is the Synthesis.
 - In Synthesis Design RTL is translated into Circuits made out of components from standard Cell Library(SCL).
 
@@ -332,9 +333,58 @@ The simplified RTL to GDS2 flow shown below starts from RTL model and ends with 
 - some examples of these views are the liberty view that includes the electrical modeles,HDL.SPICE,Layout views,etc.
 
 ##### 2) FLOOR AND POWER PLANNING:
+
 - The 2nd step of the ASIC flow is FLOOR AND POWER PLANNING
 - It is based on weather we are implmenting single component of our design aka **Macro**,or we are implementing the whole Chip.
-- The Objective here is to plan the silicon area and 
+- The Objective here is to plan the silicon area and create Robust power Distribution Network to power the circuits.
+- In **CHIP FLOOR PLANNING** the Chip Die is partitioned between different chip components.
+
+
+
+- in **MACRO FLOOR PLANNING** we define the Macro dimensions and its pin locations and also Routing tracks and Rows are defined,Which will be used later during the placement and routing steps.
+
+
+
+- In **POWER PLANNING** the power Network is constructed,typically its chip is powered by multiple VDD and Ground Pins.
+
+
+
+- The Power pins are connected to all components through Power rings and vertical and horizontal metal Power Straps.
+- Such parallel structures are meant to reduce the resistance.
+- Typically the Power distribution Network uses Upper metal layers as they are thicker than lower metal Layers,Hence they have less resistance.
+
+
+##### 3) PLACEMENT:
+
+- This is the 3rd step in ASIC design flow it is the placement for Macros.
+- We place the Gate level Netlist cells on the vertical Rows, connected cells must be placed very closed to each other to reduce the inter connect delay and also to enable successful routing afterwards.
+
+
+
+- Cell Placement is done in 2 steps:
+  - Global placements
+  - Detailed placements.
+- **Global placements** tries to find optimal postions for OR cells such positions are not nessecerily legal so cells may overlap or Go off Rows
+
+
+
+- In **Detailed placements** positions obrained by global placements are minimally altered to be legal.
+
+
+
+##### 4) CLOCK TREE SYNTHESIS (CTS):
+
+- This is 4th step in ASIC flow design is the Clock tree synthesis, before the routing the signals we need to route the clock by creating clock distribution Network to deliver the clock to all clock cells ex(Flip-Flops).
+
+
+
+- The clock network looks like a tree where the clock source is the Roots and the clock elements are the end leaves.
+- The clock tree is synthesized to deliver the clock to all cells in a good shape with minimum skew and minimum latency.
+- Clock skew means arrival of different components at different parts.
+
+##### 5) ROUTING:
+
+
 
 
 
