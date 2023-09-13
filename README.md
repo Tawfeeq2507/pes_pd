@@ -276,8 +276,27 @@ RTL stands for Register-Transfer Level. It's a level of abstraction used in digi
 <details>
 <summary> SoC design and OpenLANE </summary>
 
+#### Introduction to all components of open-source digital asic design
+
+To implement Digital ASIC design we require certain elements these elements are RTL IP's,EDA Tools,PDK data.
+
+**What is PDK?**
+
+**"PDK"** a **(Process Design Kit)** is a set of files provided by semiconductor manufacturers to help designers use their fabrication process to create integrated circuits (ICs). It contains a comprehensive set of information, models, and files that enable designers to develop and verify their designs using the specific process technology offered by the manufacturer.
+
+
+**What is EDA Tools?**
+
+EDA stands for Electronic Design Automation, and EDA tools refer to a category of software applications and tools used in the design and development of electronic systems, including integrated circuits (ICs), printed circuit boards (PCBs), and other electronic components.EDA tools are essential for designing and testing electronic hardware and ensuring that it functions correctly before it is manufactured.hese tools automate various aspects of the design process, making it more efficient and error-free. 
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/e2db98f6-b946-45ef-8c33-b2ce3ea80889)
+
+Therfore for making Open source Digital ASIC Design we have Open source for RTL IP's(librecores.org,opencores.org,github.com,etc),EDA tools(qflow,openROAD,openLANE,etc),PDK(Foss 130nm production PDK).
 
 
 
+these 3 Elements can be used to achieve 100% open-source Digital ASIC design.
+
+The methodology is then Implemented Through A Flow, this Flow is nothing but a piece of software known as RTL to GDS2,this is the main objective of the ASIC Design Flow which takes the design from RTL(REgister transfer level) to GDS2 format used for final layout.
 
 </details>
