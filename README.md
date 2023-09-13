@@ -302,6 +302,39 @@ RTL stands for Register-Transfer Level. It's a level of abstraction used in digi
 
 ### Simplified RTL2GDS flow
 
+The simplified RTL to GDS2 flow shown below starts from RTL model and ends with the readied fabricate masked set layout in the GDS 2 format:
+
+
+
+- From above the Major implementation Steps are:
+
+  - Synthesis 
+  - Floor planning(FP) + power planning(PP)
+  - Placement
+  - CTS(Cook Tree Synthesis)
+  - Routing
+  - Sign off
+
+##### 1) SYNTHESIS:
+- Its the first major step in a typical ASIC flow is the Synthesis.
+- In Synthesis Design RTL is translated into Circuits made out of components from standard Cell Library(SCL).
+
+
+
+- The resulted circuit is described in HDL(Hardware descriptive language) usually referred to as gate level Netlist.
+- The Gate level Netlist is functionally equivalent to RTL.
+- The Library building blocks or the cells have regular layout,Typically the cell Layout is enclosed by fixed hieght standard.
+
+
+
+- The cell width is variable but its Discrete.
+- Each cell comes with different models/views utilized by different EDA Tools
+- some examples of these views are the liberty view that includes the electrical modeles,HDL.SPICE,Layout views,etc.
+
+##### 2) FLOOR AND POWER PLANNING:
+- The 2nd step of the ASIC flow is FLOOR AND POWER PLANNING
+- It is based on weather we are implmenting single component of our design aka **Macro**,or we are implementing the whole Chip.
+- The Objective here is to plan the silicon area and 
 
 
 
