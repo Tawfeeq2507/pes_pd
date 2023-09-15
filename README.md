@@ -504,7 +504,8 @@ The Main goal of OpenLANE is to produce a clean GDS2 with no human intervention,
 <details>
 <summary> Get familiar to open-source EDA tools </summary>
 
-### OpenLANE Directory structure in detail
+#### OpenLANE Directory structure in detail
+
 
 
 
