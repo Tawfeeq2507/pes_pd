@@ -385,7 +385,26 @@ The simplified RTL to GDS2 flow shown below starts from RTL model and ends with 
 
 - This is the 5th step in ASIC Design Flow known as the Routing.
 - After Routing the Clock comes the signal Routing, Given the placements and fixed number of metal layers it is required to find a valid pattern of horizontal and vertical wires to implement the Nets that connects the cells together.
-- The Router 
+- The Router uses the available metal layers as defined by the PDK, for each metal layer the PDK defines the Thickness,pitch,tracks and the minimum width.
+- The sky130 PDK defines extra layers the lowest connecting layer is called the lower interconnect layer,the following 5 layers after this are all aluminum layers.
+
+
+
+- Most Routers are grid routers, they construct the routing grid out of the metal layer tracks.
+- As routing is huge Divide and conguer is usually used for routing.
+- First Global Routing is performed and then followed by detailed routing.
+
+
+##### 6) SIGN OFF:
+
+- This is the last step of ASIC Design flow known as the Sign OFF.
+- Once done with Routing we can construct the final layout,Which undergoes Verifications which includes Physical Verifications and Timing Verifications.
+- The **Physical Verification** includes the **DRC(Design Rule Checking)** where we make sure that the final layout honours all design rule.It is then proceded by **LVS(Layout bs Schematic)** that makes sure that the final layout matches the Gate level Netlist.
+- The **Timing Verifcation** has **STA(Static Timing Analysis)** to make sure that all time constraints are matched and the circuit Runs on the designated Clock frequency.
+
+
+
+
 
 
 
