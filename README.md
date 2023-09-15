@@ -24,9 +24,6 @@ Welcome to my GitHub repository dedicated to VLSI Physical Design for ASICs usin
 + Get familiar to open-source EDA tools
   - OpenLANE Directory structure in detail 
   - Design Preparation Step
-  - Review files after design prep and run synthesis
-  - OpenLANE Project Git Link Description
-  - Steps to characterize synthesis results 
   
 ## DAY-2
 
@@ -526,6 +523,7 @@ The Main goal of OpenLANE is to produce a clean GDS2 with no human intervention,
 - in bash type `flow.tcl -interactive`.
 
 ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/6b39e5f6-d8c4-435e-a211-8937aee055c0)
+
 
 
 
