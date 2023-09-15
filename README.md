@@ -388,12 +388,13 @@ The simplified RTL to GDS2 flow shown below starts from RTL model and ends with 
 - The Router uses the available metal layers as defined by the PDK, for each metal layer the PDK defines the Thickness,pitch,tracks and the minimum width.
 - The sky130 PDK defines extra layers the lowest connecting layer is called the lower interconnect layer,the following 5 layers after this are all aluminum layers.
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/a3ebd737-9146-4400-8447-abba4d5b033a)
 
 - Most Routers are grid routers, they construct the routing grid out of the metal layer tracks.
 - As routing is huge Divide and conguer is usually used for routing.
 - First Global Routing is performed and then followed by detailed routing.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/db46cc8a-cd81-4009-b3e0-7ff9b4f20a33)
 
 ##### 6) SIGN OFF:
 
@@ -401,6 +402,30 @@ The simplified RTL to GDS2 flow shown below starts from RTL model and ends with 
 - Once done with Routing we can construct the final layout,Which undergoes Verifications which includes Physical Verifications and Timing Verifications.
 - The **Physical Verification** includes the **DRC(Design Rule Checking)** where we make sure that the final layout honours all design rule.It is then proceded by **LVS(Layout bs Schematic)** that makes sure that the final layout matches the Gate level Netlist.
 - The **Timing Verifcation** has **STA(Static Timing Analysis)** to make sure that all time constraints are matched and the circuit Runs on the designated Clock frequency.
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/4b7c477c-f2fe-444a-b9fc-0b793149aee4)
+
+### Introduction to OpenLANE and Strive chipsets 
+
+#### What is OpenLANE?
+**OpenLANE*** is an open-source digital ASIC (Application-Specific Integrated Circuit) design flow and toolchain that aims to automate the process of designing and manufacturing custom silicon chips. It was primarily developed by efabless, an open-source semiconductor company, and it is part of the Google/Skywater 130nm PDK (Process Design Kit) based ASICs.
+
+- Started as a Open-Source flow for a true Open-Source Tape out experiment.
+- There is family of Soc's called as striVe,which is Open PDK,Open EDA,Open RTL.
+- this family has several members as shown below:
+
+
+The Main goal of OpenLANE is to produce a clean GDS2 with no human intervention,by clean we mean that there is no LVS violations,DRC violations.
+
+- OpenLANE is tuned for SkyWater 130nm Open PDK, it also supports XFAB180 and GF130G.
+- it is functional out of the box.
+- intructions to build and run natively will follow
+- OpenLANE can be used to harden Macros and chips.
+- it has two modes of operation:
+   1) Autonomous : Autonomous is a push button flow,where we configure the flow and then push button and wait for some time based on the design size and get the final GDS tool.
+   2) Interactive : With Interactive we can run commands and steps one by one.we can watch the immediate results whicle we run the steps and commands.
+
+- It has Design Space Exploration which can be used to find the best set of flow configuration.
 
 
 
