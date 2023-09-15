@@ -480,7 +480,7 @@ The Main goal of OpenLANE is to produce a clean GDS2 with no human intervention,
 
 ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/7c652e2c-277c-4d8f-930c-c07dbed481d5)
 
-3) addition of Antenna diodes:
+2) addition of Antenna diodes:
 
 ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/a6401584-e5a6-43c0-a404-ecef0b44938f)
 
