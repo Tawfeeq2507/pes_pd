@@ -1,4 +1,4 @@
-![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/6e9a034d-3ac9-40c3-a049-2cffe390d187)![image](https://github.com/VardhanSuroshi/pes_asic_class/assets/132068498/33403244-c9dd-4aef-a022-da52e2eef51c)
+![image](https://github.com/VardhanSuroshi/pes_asic_class/assets/132068498/33403244-c9dd-4aef-a022-da52e2eef51c)
 
 Welcome to my GitHub repository dedicated to VLSI Physical Design for ASICs using open-source tools.
 
