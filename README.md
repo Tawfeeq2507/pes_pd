@@ -520,16 +520,12 @@ The Main goal of OpenLANE is to produce a clean GDS2 with no human intervention,
 - inside libs.ref we will be working with `sky130_fd_sc_hd`
 - where `sky130` is the process name and `fd` is the abrievated foundry name and `sc` is known as standard cell and `hd` says the varient of the PDK.
 
+#### Design Preparation Step
 
+- To work on Openlane type `docker` in the openlane directory.
+- in bash type `flow.tcl -interactive`.
 
-
-
-
-
-
-
-
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/6b39e5f6-d8c4-435e-a211-8937aee055c0)
 
 
 
