@@ -527,51 +527,5 @@ The Main goal of OpenLANE is to produce a clean GDS2 with no human intervention,
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </details>
 
