@@ -414,6 +414,7 @@ The simplified RTL to GDS2 flow shown below starts from RTL model and ends with 
 - There is family of Soc's called as striVe,which is Open PDK,Open EDA,Open RTL.
 - this family has several members as shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/638433b3-244a-4573-8d78-33e507aea9a0)
 
 The Main goal of OpenLANE is to produce a clean GDS2 with no human intervention,by clean we mean that there is no LVS violations,DRC violations.
 
@@ -424,8 +425,62 @@ The Main goal of OpenLANE is to produce a clean GDS2 with no human intervention,
 - it has two modes of operation:
    1) Autonomous : Autonomous is a push button flow,where we configure the flow and then push button and wait for some time based on the design size and get the final GDS tool.
    2) Interactive : With Interactive we can run commands and steps one by one.we can watch the immediate results whicle we run the steps and commands.
-
 - It has Design Space Exploration which can be used to find the best set of flow configuration.
+
+### Introduction to OpenLANE detailed ASIC design flow 
+
+- OpenLANE ASIC flow has many steps as shown below:
+
+
+- The flow starts with Design RTL and ends at GDS2 format,to function this it needs the PDK Sky130.
+- OpenLANE is based on several Opensource projects such as shown below:
+
+
+- The flow starts with RTL synthesis where it is fed to Yosys with design constraints.Yosys translates the RTL into a Logic circuit.This circuit is then optimised and then mapped into a cell using abc,abc has to guided during Optimisation,this guidance comes in the form of abc Script.
+- OpenLANE comes with several abc scripts referred as Synthesis Strategies.Different Designs can use different Strategies to achieve the Objectives and for that we have the Synth exploration utility.
+- Synth Exploration utility can used to generate a report that shows about the design delay and area is effected by the Synthesis Strategy and based on this exploration we can pick the best strategy to continue with.
+- OpenLANE also has Design exploration utility which can be used to sweep the design configurations.It generates a report shown below:
+
+
+- It shows different design metrics, number of violations generated after generating the final layout.
+- This is best to find the design configurations for OpenLANE for any given Design.
+
+- The design Exploration is also used for **Regression testing(CI)**
+
+
+- After Synthesis comes the testing structural insertion,if we want our design to be ready for testing after fabrication we can enable this step called **DFT** which is optional.
+- **DFT(Design For Test)** used Opensource Fault to perform scan insertion,Automatic test pattern generation(ATPG),Test patterns compaction,Fault coverage,fault simulation.
+
+
+- After DFT the **Physical Implementations** involve the following steps shown below:
+
+
+- All these are done by the OpenROAD app.
+- After Physical implementation we Do **LEC(Logic Equivalence Check)** using Yosys.
+- LEC is used to formally confirm that the function did not change after modifying the Netlist.
+
+
+- During Physical implementation we have an important step and this step is known as **fake antenna diodes insertion**
+- This step is required to address the Antenna diodes violations but there are some issues as explained in the figure:
+
+
+- To deal with this and not allowing our transistor gates to get damaged during fabrication there are two solutions:
+1) Bridging:
+
+2) addition of Antenna diodes:
+
+- With OpenLANE we take a preventive approach:
+
+- After this process we have the SIGN OFF which has the Static timing analysis,design rule checking and Layout vs schematic.
+- Timing Sign off involves interconnect RC extraction from the routed Layout followed by static timing  analysis performed by OpenSTA(an OpenROAD) tool.
+- The result of this report Highlights any timing violations of if any are present.
+
+
+- Physical Sign off involves DRC and LVS done by Netgen and Magic VLSI design tool shown below:
+
+
+
+
 
 
 
