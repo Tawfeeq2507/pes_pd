@@ -1,4 +1,4 @@
-![image](https://github.com/VardhanSuroshi/pes_asic_class/assets/132068498/33403244-c9dd-4aef-a022-da52e2eef51c)
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/6e9a034d-3ac9-40c3-a049-2cffe390d187)![image](https://github.com/VardhanSuroshi/pes_asic_class/assets/132068498/33403244-c9dd-4aef-a022-da52e2eef51c)
 
 Welcome to my GitHub repository dedicated to VLSI Physical Design for ASICs using open-source tools.
 
@@ -505,6 +505,20 @@ The Main goal of OpenLANE is to produce a clean GDS2 with no human intervention,
 <summary> Get familiar to open-source EDA tools </summary>
 
 #### OpenLANE Directory structure in detail
+
+- To access the Openlane go to `desktop/work/tools` and then change directory to `openlane_working_directory`.
+- to access the PDK's chnage directory to `pdks` and then we see the different PDK's.
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/9b2ef07b-94c7-4a14-b404-53f824c89e52)
+
+- The `SkyWater.pdk` is the folder that has all the related PDK files.(ie: timing libraries,lib files,techlib)
+- `sky130A pdk` is that pdk that has made compatible to Open source environment,`sky130A` is a varient of PDK.
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/cb5f47c3-f15b-4b91-b42f-1c393a66a276)
+
+- when we check the files inside the sky130A pdk we have libs.ref and libs.tech.
+- inside libs.ref we will be working with `sky130_fd_sc_hd`
+- where `sky130` is the process name and `fd` is the abrievated foundry name and `sc` is known as standard cell and `hd` says the varient of the PDK.
 
 
 
