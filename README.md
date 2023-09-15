@@ -498,42 +498,9 @@ The Main goal of OpenLANE is to produce a clean GDS2 with no human intervention,
 
 ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/b8580063-6b56-43f4-8726-e554d8808022)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </details>
+
+
+<details>
+<summary> Get familiar to open-source EDA tools </summary>
+
