@@ -628,12 +628,14 @@ To place the pre placed cells in the chip lets consider three pre placed cells a
 
 - To solve this we use Decoupling Capacitors are huge capacitors completely filled with charge,therefore if our main voltage is source is 1v our deocupling capacitors also get charged to 1V.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/bbed32e9-eedb-4538-a1f3-65c3efadc531)
 
 - Whenever our main circuit switches on it gets the power from the decoupling capacitors as its near or attached to the circuit giving the proper current to the circuit,therby decoupling the main circuit from the power supply.
 - Whenever the main circuit switches on the decoupling capacitors start losing the charge and when ther is no switching activity with main circuit decoupling capacitors spends time to replenish its own charge.
 
 Hence we surround the preplaced cells with the decoupling capacitors in order to keep the current flow as required without any problems of voltage drops.thereby ensuring each preplaced cells are getting the supply from the Decoupling capacitors.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/ccbf4b56-0224-4f3c-8353-bb7cf7088145)
 
 
 
