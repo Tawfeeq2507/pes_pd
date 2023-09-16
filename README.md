@@ -676,20 +676,28 @@ Power planning, in the context of integrated circuit (IC) design, is the process
 
 - lets consider the given designs to be implmented along with some pre placed cells as shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/510cd2d7-ce52-4c59-88c2-72d0e69e90d3)
 
 - From above image we currently have 4 input ports and 3 outpur ports
 - lets take 2 more designs but both are driven using different clocks with a common pre placed cell as shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/2b6e8e8c-768b-4b4a-b262-8bd5944fa601)
+
 - Now we we try implement this complete design into the chip:
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/42e53547-8112-4c98-8fcf-31a936052b10)
 
 - While placement of pins it depends and varies on design structure, we can have input on top and output on bottom or input at left and output at right.
 - Clock 1 and clock 2 drive the complete chip.
 - Bigger the size lower is the resistance hence we need the clock signal to move In and out of the chip as fast as possible as its driven continously hence we need least resistance path for the clock therfore we create bigger boxes for clock 1 and clock 2 and clock out.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/713c2968-a3fc-4656-a3e4-abf16198dd0a)
 
 - After Pin placement we make sure that none of the automated placement and routine tool doesnt place any cells in the particular area that the gaps between each clock ports,the area should be blocked for placement and routine tool,hence we do logical cell placement blockage.
 
- 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/c6813abb-f30d-439c-9df8-cb99b76da601)
+
+
 
 
 
