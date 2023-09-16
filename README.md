@@ -537,6 +537,7 @@ The Main goal of OpenLANE is to produce a clean GDS2 with no human intervention,
 
 - How to come up with the width and height of core and die
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/a67c205c-265c-461b-908c-1c7c2f5c62ae)
 
 - we need to see how we come up with the values of 'W' and 'H'.
 
@@ -545,34 +546,40 @@ lets take an example of a netlit to Identify the width and height of core and di
 - we begin with a simple netlist takiing two D flip flips,aka launch flop and the capture flop with a simple combinational logic between them.
 - a Netlist basically defines the connectivity between all the components.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/2080d268-5165-4e52-b1bf-0827d2bd686b)
 
 - For dimensions of the chip we are mostly dependent on the dimensions of the Logic gate.
 - we then convert it into physical dimension.
 
-  
+  ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/eea1b776-03db-45b9-b309-ab3e8a4b2f78)
+
 - since we want to find the dimentions of the core and die we will be needing the dimensions of the standard cells.
 - we start giving some unit area for the each logic gate as shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/d448e63b-fa86-4608-8b99-21fe88b90931)
 
 - with the help of this netlist we try to calculate the area occupied on the silicon wafer.
 - we club all together to form a rough image of the area the netlist occupied,(ie 4 sq units for the image shown below):
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/a10ce57c-b25d-4d09-8d30-856a40ffbc91)
 
 - On the silicon wafer we have many die and core in it and this is the core section where the fundamental logic goes and sits into and die is the outer layer where our fundamental logic fits within this itself and does not exceed it.
 
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/5d477e6f-f3d1-4c71-b109-d91003a1f6b2)
+  
 - we implment this die multiple times on the silicon wafer to increase the throughput.
 - when we implment the logic into the core,the logic cells occupied 100% of the core,thereby occupying Utilising 100% of the core.
-
-
 - To come up with the Utilisation, we have the Utilisation factor given by:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/c39e4e8c-817c-47fe-80b6-c6a522b4244e)
 
 - for the above logic the `utilisation factor = 1`,when we get utilisation factor as 1 it means that our logic has occupied 100% of the core and ther are no gaps or spaces left to fill.
 - Idealyy we go for Utilisation of 50 to 60% and Utilisation factor of 0.5 or 0.6.
 - We also have **ASPECT RATIO**,aspect ratio refers to the ratio of the width to the height of a transistor. It is a critical parameter in the design and fabrication of integrated circuits.
+
 - Aspect Ratio is given by-
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/6a4eb22f-7c79-4225-930b-d56c461419d6)
 
 - In this case the Aspect ratio = 1, Whenever the aspect ratio is 1 it signifies that the chip is a square shaped chip.when the aspect ratio is other than 1 then it signifies that our chip is rectangle in shape.
 
