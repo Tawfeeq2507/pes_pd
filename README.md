@@ -714,32 +714,35 @@ Power planning, in the context of integrated circuit (IC) design, is the process
 
 - The  most important step in placement and routing is to bind the netlist with the physical cells.
 - Consider the particular netlist with all these Gates and the shape of the gates represent the functionality of the Gates,but in reality we dont have shapes like the ones shown below we have it in box type with width and height of the particular cell.
-- so at the end we will be having each logic gate with a shape and the pre placedd blocks and we will be left out with wires.
+- so at the end we will be having each logic gate with a shape and the pre placed blocks and we will be left out with wires.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/bf88ba01-e400-4812-8e46-80847b86c555)
 
 - Now these all blocks of shape are now present in a shelf known as Library, Library contains various types of blocks including these(ex flip flops,AND gate, Or gate ,etc)
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/f72ed276-1089-402d-992a-d57654d3caee)
 
 - The library also holds the information of each logic gate like delays and etc,the library can be classified into either 2 types one that holds the shapes and one that holds the information of each logic gate.
 - The library will have the information of the shape the width and height,the delay information of each and every cell and the required condition of the particular cells.
 - The library also holds different flavours of the cell it tries to store(ex if the 2 block is an and gate the library also shows another same AND gate but a bit bigger in size,least resistance path than the normal one as its bigger in size therby being faster compared to the normal one),therfore it has flavours of each and every cell we try to store it in.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/57bb1a47-9e68-49cb-a7bd-e963c3b8df1c)
 
 - we can pick what we want to use based on our available space on floorplan.
 - Therefore in summary library consists of everything it consists of cells,shapes and size of the cells,various flavours of the same cells and the timing and delay information.
 
 Once we have given proper shape and size and delay information of our cell using the library the next step is to take this cell and place it onto the floorplan,so we have the floorplan,we have the netlist,we have the physical design view of the netlist in form of logic gates.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/798ac757-a04e-458b-813b-337e6137dc14)
 
 - The netlist wont come into picture as we will be using the Physical view of logic gates though we will be following the connectivity information from the netlist itself.
 
 **How this is done?**
 
 - The placement stage will make sure that the pre placed cell locations are not are not affected and kept as it is and there will be no cells that can be placed in that area.
-
-
 - we now place each of the shape cells from the physical deisgn view of logic gates in a proper manner such that ther are no delay contraints,we place them in such a way that they are close to thier respective input and ouput port pins, we place them close because if FF2 was placed somewhere below and the distance from FF2 to dout1 wud be higher therby having more timing delay to communicate with the output pin.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/37a6fc52-71d7-4533-b0b8-b0edfd7e407e)
 
 - From above we clearly see that FF1 is placed near to Din1 and FF2 is placed near to Dout1 as they are connected close to each other using the Netlist as refrence we fill all the other the same way.
 
