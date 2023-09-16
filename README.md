@@ -583,6 +583,30 @@ lets take an example of a netlit to Identify the width and height of core and di
 
 - In this case the Aspect ratio = 1, Whenever the aspect ratio is 1 it signifies that the chip is a square shaped chip.when the aspect ratio is other than 1 then it signifies that our chip is rectangle in shape.
 
+### Concept of Pre placed cells
+
+"preplaced cells" refer to specific components or modules that are manually placed in predetermined locations on the chip before the automated placement and routing tools are used to complete the design.These preplaced cells are typically larger and more critical components, such as processors, memory blocks, or custom-designed circuits.
+
+- To define the locations of pre placed cells lets consider an example using a combinational logic, and the output of this combinational logic is a huge circuit.
+- we need not implment this circuit as part of the main circuitry itself always but by taking this peice of circuit out of the main circuit and then implment it separately by dividing the circuit itself into 2 parts.
+
+
+- Now we try separate these two into 2 different blocks where each block will be implemented separately.
+- we take thw two blocks separately and extend I/O pins.
+
+
+- we then black box these blocks, when we do it this becomes invisible.
+
+
+- we then separate the two blocks as two different IP's and modules.
+- By doing this we can implment this one time and can be REUSED multiple times.
+
+
+- similarly there are multiple IP's available as shown belo:
+
+
+- Arrangment of these IP's in the  chip is referred as FLOORPLANNING.
+
 
 
 
