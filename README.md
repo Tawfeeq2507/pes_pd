@@ -697,6 +697,11 @@ Power planning, in the context of integrated circuit (IC) design, is the process
 
 ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/c6813abb-f30d-439c-9df8-cb99b76da601)
 
+###  Steps to run floorplan using OpenLANE
+
+- To run the floorplan on OpenLANE type `run_floorplan` in OpenLANE directory after run_synthesis and basic steps to run OpneLANE.
+- to see the actual Layout after floorplan it is first done in magic.
+- to access magic type `magic -T`
 
 
 
