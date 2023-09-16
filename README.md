@@ -637,6 +637,32 @@ Hence we surround the preplaced cells with the decoupling capacitors in order to
 
 ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/ccbf4b56-0224-4f3c-8353-bb7cf7088145)
 
+### Power planning 
+
+Power planning, in the context of integrated circuit (IC) design, is the process of strategically distributing power supplies (such as VDD and VSS) and ground connections across the chip to ensure proper and reliable operation of the electronic components.Effective power planning is crucial for achieving reliable and high-performance integrated circuits.
+
+
+- Consider the above circuit which we used for decoupling capacitors and convert it into a Macro,now this Macro is repeated multiple times on the chip creating a current Demand for each and every element of the particular macro.Now suppose one is driver and other is loader each macro have a decoupling capacitors and we need to send signal from driver to load, we need to make sure the particular line between the driver to load maintains the same particular signal.
+
+
+- The line between the driver and load should get the necessary power from the power supply as decoupling capacitors cannot be placed in between therfore having a possibility of voltage drop as the power supply is far from the signal line.
+- Hence we consider a 16 bit bus connected to an inverter when we pass the logic to the inverter the output will be inverted value of the input therfore all the capacitors charged to logic 1 are now dischraged to Logic 0 and vise versa.
+
+  
+- But since we have a common ground line for all the capacitors as they all discharge to logic 0 to gnd it gives a **Ground bounce**, and the size of this bounce exceeds the noise margin level it might enter into the undefined state or the danger region.
+
+- now when all the other capacitors charging from Logic 0 to logic 1 in that case all these capacitors are demanding for supply from the main power supply at the same time and we have a single voltage line for all the capacitors hence we get a **Voltage Droop**
+
+- Therefore the problem is that the supply is from a One source power supply creating multiple power supply wud reduce this problem, hence we do **"POWER PLANNING"**.
+- We put multiple power supplies instead of single one by creating multiple vdd and vss lines,therby giving any power supply demand to the circuit.
+- The power planning structure is shown below:
+
+
+ 
+
+
+
+
 
 
 
