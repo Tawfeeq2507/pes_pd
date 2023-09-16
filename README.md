@@ -666,6 +666,28 @@ Power planning, in the context of integrated circuit (IC) design, is the process
 
 ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/aa922e04-bc35-4e15-a2ba-e172d6e51429)
 
+### Pin placement and logical cell placement blockage
+
+**What is Pin placement?**
+
+- Pin placement refers to the process of determining the physical locations where the input and output pins of a digital IC will be placed on the chip. These pins are the electrical interfaces through which the IC communicates with the external world, connecting to other components on a printed circuit board (PCB) or another IC. Proper pin placement is crucial for efficient routing of signals and minimizing signal integrity issues.pin placement blockage restricts the placement of input and output pins.
+
+- Logical cell placement involves determining the physical locations of the individual functional blocks or cells within an IC. Each cell represents a specific digital logic function (e.g., gates, flip-flops, multiplexers) and their arrangement on the chip affects factors like signal propagation delays, power consumption, and ease of routing.This specifically refers to the restriction of placement of logic cells. Certain areas of the chip may be designated as off-limits for placing logic cells. This could be due to predefined constraints like reserving space for custom analog blocks, clock distribution networks, or other critical components.
+
+- lets consider the given designs to be implmented along with some pre placed cells as shown below:
+
+
+- From above image we currently have 4 input ports and 3 outpur ports
+- lets take 2 more designs but both are driven using different clocks with a common pre placed cell as shown below:
+
+- Now we we try implement this complete design into the chip:
+
+- While placement of pins it depends and varies on design structure, we can have input on top and output on bottom or input at left and output at right.
+- Clock 1 and clock 2 drive the complete chip.
+- Bigger the size lower is the resistance hence we need the clock signal to move In and out of the chip as fast as possible as its driven continously hence we need least resistance path for the clock therfore we create bigger boxes for clock 1 and clock 2 and clock out.
+
+
+- After Pin placement we make sure that none of the automated placement and routine tool doesnt place any cells in the particular area that the gaps between each clock ports,the area should be blocked for placement and routine tool,hence we do logical cell placement blockage.
 
  
 
