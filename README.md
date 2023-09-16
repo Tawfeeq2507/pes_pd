@@ -746,7 +746,31 @@ Once we have given proper shape and size and delay information of our cell using
 
 - From above we clearly see that FF1 is placed near to Din1 and FF2 is placed near to Dout1 as they are connected close to each other using the Netlist as refrence we fill all the other the same way.
 
+- we place the 2nd stage of the netlist in the way shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/6ec6568e-572e-45ab-9d3c-edacb0f916f1)
+
+- Here we see that in 2nd stage FF1 is not close to Din2 for and FF1,cell 1,cell 2, FF2 the delay between FF1 and 1 will be very minimal and similarly the delay between 1 and 2 is also minimal, we do this beacuse of some reasons given ahead.
+
+### Optimize placement using estimated wire-length and capacitance
+
+- The 3rd stage to be placed we see that FF1 needs to be connected to Din3 and FF2 to Dout 3 but the distance between them is huge hence we try to place them diagonally as shown below:
+
+
+- Similarly implementing stage 4 in quite tricky as we have pre placed cells and we cant give FF1 close to Din4 therefore the distance is huge again in stage 4 as there is again a diagonally opposite I/O ports for stage 4 on the chip.
+- we place the stage as shown below:
+
+
+- Now we try to solve the Problems that we encountered while placing these cells, the Solution for these Problems is known as **Optimize placement**.
+- This is the stage where we do estimations where we estimate the wire length,capacitance and based on that insert **repeaters**.
+- lets consider FF1 of 2nd stage and din2 we see that capacitances between them is very huge as its huge length of wire and even the resistance as it depends on length and lenght is huge.Therefore the signal delay is high from din2 to FF1 of 2nd stage due to the distance.
+- we fix this problem by placing a **Repeater** in between Din2 and FF1 of 2nd stage to pass on the signal thereby reducing delay and buy having loss of data,therfore whatever is told to Din2 is succesfully retained by FF1 of 2nd stage and This is called **Signal Integrity**.
+
+**REPEATER**
+
+- are basically buffers that will recondition the old signal and make a new signal which replicates the original signal and sends it again, in this way many repaeters are placed and signal integrity is mmaintained But at a loss of area as more and more repeaters will be used for long distances which is a trade off.
+- In the 1st stage we done need any repeaters.
+- **SLEW** is basically depended upon the value of the capacitor,higher the value of capacitor 
 
 
 
