@@ -590,22 +590,49 @@ lets take an example of a netlit to Identify the width and height of core and di
 - To define the locations of pre placed cells lets consider an example using a combinational logic, and the output of this combinational logic is a huge circuit.
 - we need not implment this circuit as part of the main circuitry itself always but by taking this peice of circuit out of the main circuit and then implment it separately by dividing the circuit itself into 2 parts.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/864a0a58-4c3f-427f-bb01-32e7877536ae)
 
 - Now we try separate these two into 2 different blocks where each block will be implemented separately.
 - we take thw two blocks separately and extend I/O pins.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/72fd9433-5a5c-4351-89a5-97bdf14f6091)
 
 - we then black box these blocks, when we do it this becomes invisible.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/f8111421-6b33-45e1-b918-f26331fe223f)
 
 - we then separate the two blocks as two different IP's and modules.
 - By doing this we can implment this one time and can be REUSED multiple times.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/ab13d592-0653-4adc-b050-d6bb98004765)
 
 - similarly there are multiple IP's available as shown belo:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/f2ba8da9-0306-45e7-aa8d-c7de71355760)
 
 - Arrangment of these IP's in the  chip is referred as FLOORPLANNING.
+
+To place the pre placed cells in the chip lets consider three pre placed cells a,b,c, the chip has pins at the sides which can be output and input pins.
+
+- since preplaced cells communicate with the inputs a lot we place them close to the input pins,once the pre placed cells are placed the locations cant be moved in the complete design cycle hence they need to be placed carefully
+
+- We surround the preplaced cells with Decouplling capacitors.
+
+### De-coupling capacitors 
+
+**What are Decoupling capacitors?**
+
+- Decoupling capacitors, often referred to as bypass capacitors, are components used in electronic circuits to stabilize and improve the performance of integrated circuits (ICs) and other electronic devices.decoupling capacitors are placed very close to the power pins of integrated circuits. They come in various capacitance values and are selected based on the specific requirements of the circuit.
+
+- Having a large distance from the power supply and the main circuit has a dissadvantage as there are multiple volrage drops happening before it reaches the main circuit giving a less voltage at the main circuit due to voltage drops therefore we cant gaurantee that our logic gates in the circuit are getting either a high voltage(logic 1) or a low voltage(logic 0) or a danger region or gray region(Either Logic can go to 1 or 0 giving high or low volts) hence we have a dissadvantage of Voltage being far from our circuit design.
+
+- To solve this we use Decoupling Capacitors are huge capacitors completely filled with charge,therefore if our main voltage is source is 1v our deocupling capacitors also get charged to 1V.
+
+
+- Whenever our main circuit switches on it gets the power from the decoupling capacitors as its near or attached to the circuit giving the proper current to the circuit,therby decoupling the main circuit from the power supply.
+- Whenever the main circuit switches on the decoupling capacitors start losing the charge and when ther is no switching activity with main circuit decoupling capacitors spends time to replenish its own charge.
+
+Hence we surround the preplaced cells with the decoupling capacitors in order to keep the current flow as required without any problems of voltage drops.thereby ensuring each preplaced cells are getting the supply from the Decoupling capacitors.
 
 
 
