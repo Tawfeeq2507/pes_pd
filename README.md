@@ -835,6 +835,9 @@ we have different tool to do botht the functionalities.
 
 - since global placement is to reduce the wire length in openlane we use concept of hpwl(Half permitable wire length),therefore it focuses on reducing this hpwl.
 - once we `run_placement` in openlane we see that the hpwl values converge basically the length is reducing.
+- to see the placement in openlane type `magic -T` with the required file location of the placement file.
+
+
 
 
 
