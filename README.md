@@ -898,14 +898,14 @@ we have different tool to do both the functionalities.
 
 Circuit design is then divided into 3 steps:
 
-1)circuit design 
+1) circuit design 
 
 ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/a5c365a1-3959-4048-b145-f92fd8e21a4e)
 
 - mostly depended upon the SPICE simulations where the standard objective is to maintain the drain current of PMOS and NMOS should be equal to 0 
 - the ouput that we get out of the circuit design is known as the CDL(Cricuit Design Language) File.
 
-2)Layout design
+2) Layout design
 
 - in layout design we try to get the PMOS and NMOS network graphs out of the implemented design.
 
@@ -917,7 +917,7 @@ Circuit design is then divided into 3 steps:
   
 - The output of the layout Design will be GDS2,LEF(defines width and height of the cell),extracted spice netlist.
 
-3)charecterisation
+3) charecterisation
 
 - lets take example of the layout of a buffer as shown below:
 
@@ -952,8 +952,29 @@ Circuit design is then divided into 3 steps:
 - This software generates timing,noise,power,.lib,fucntions files.
 - therefore the characterisation gets sub divided here into timing,power,noise characterisation.
 
+</details>
+
+<details>
+<summary> General timing characterization parameters </summary>
+
+### Timing Threshold definitions
+
+**TIMING CHARACTERISATION**
+
+- From the descriptive image of the buffer shown during the characterisation comes to an understanding of different threshold points of a waveform itself which is called as **Timing Threshold Definitions** .The timing threshold of the above image is shown below:
 
 
+- The output of the waveform looks like this shown below:
+
+
+- The above waveform is to understand the Slews of thee waveform slew rise shows the red rising graph and slew fall is shown by the blue falling graph each of ther graph have high and low values.
+- similarly we have it for input rise and fall and output rise and fall, the input rise and fall is shown below:
+
+
+- The output rise and fall is shown below:
+
+
+- 
 
 
 
