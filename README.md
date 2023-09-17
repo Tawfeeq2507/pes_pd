@@ -888,6 +888,7 @@ we have different tool to do both the functionalities.
 
 - The library and user defined specifications tells us the cell height and the power rail and the ground rails used inside the core of the chip as shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/2b64b3ac-7b63-49eb-b9a4-9abff3a9ce45)
 
 - The seperation between the power rail and ground rails decides the **Cell Height** and it is responsible by the library developer that the cell height cell is maintained.
 
@@ -899,6 +900,8 @@ Circuit design is then divided into 3 steps:
 
 1)circuit design 
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/a5c365a1-3959-4048-b145-f92fd8e21a4e)
+
 - mostly depended upon the SPICE simulations where the standard objective is to maintain the drain current of PMOS and NMOS should be equal to 0 
 - the ouput that we get out of the circuit design is known as the CDL(Cricuit Design Language) File.
 
@@ -906,23 +909,31 @@ Circuit design is then divided into 3 steps:
 
 - in layout design we try to get the PMOS and NMOS network graphs out of the implemented design.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/4f9030f2-2dd8-46c9-818f-47f7b578d730)
 
 - The next step is to use eulers path and draw stick diagram out of it.
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/db145dbf-0f6a-4915-a208-df9d78f2856a)
+  
 - The output of the layout Design will be GDS2,LEF(defines width and height of the cell),extracted spice netlist.
 
 3)charecterisation
 
 - lets take example of the layout of a buffer as shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/e98dc2f0-98f4-4482-a0d9-91690e7f02d5)
 
 - we have the description of this buffer as shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/e152b496-74eb-4c22-864e-9551cf60a5da)
 
 - for this we have spice extracted Netlist basically whatever we have in the Layout buffer the contacts the metal layers and everything for each element will have a resistance and capacitances we have extracted them all in terms of a spiced Netlist as shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/34682b40-10f2-4c5c-8ea3-e97099383c27)
 
 - for this we have the sub circuit file loaded, it contains the actual PMOS and NMOS models as shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/8fb79374-51b5-46f6-8b83-f8f6ad17b454)
 
 - we have then read the models of PMOS and NMOS as shown above:
   
