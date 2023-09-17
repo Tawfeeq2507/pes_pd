@@ -703,15 +703,24 @@ Power planning, in the context of integrated circuit (IC) design, is the process
 - to see the actual Layout after floorplan it is first done in magic.
 - to access magic type `magic -T` with the directory of our deisgn file we want to access using the magic application.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/8f4e8927-ab8f-4fb0-8aea-ee1ddc3a8be5)
 
 ### Review floorplan layout in Magic
 
 - after opening the required file in Magic we can now try to see and reivew the floorplan.
 - to keep the the design floorplan in the middle of the screen press V.
 - to zoom in we select the part of the design we want using left to select the portion of the region we want to access and then left click to to select that region and press Z to soom inside that region.
+- we see the selected region as shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/d1868204-5ab2-4ff9-80b9-1c68716da681)
 
-- apart from the deisgn view window we also have a tkcon window where we open and type `what` inside the tkcon window it shows us the 
+- we want to zoom inside this and we can see the cells used inside this as shown below:
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/8d9965f6-6416-41aa-9278-2278914f7da6)
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/c10ad79e-a303-4306-a499-7a3f5962e8f1)
+
+- apart from the deisgn view window we also have a tkcon window where we open and type `what` inside the tkcon window it shows us 
 
 
 
