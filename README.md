@@ -983,21 +983,30 @@ Circuit design is then divided into 3 steps:
 
 **PROPAGATION DELAY**
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/e3b7556e-b97b-4efd-a61e-1a08bb1349f9)
+
 - To get Delay we subtract out - In of the above graph.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/62870a82-f5c3-4b6c-93bf-f1611668900f)
 
 - From above graph we see that our output blue comes before our input red thats why we see negative delay here which are not expected, The reasaon behind the negative delay is poor choice of threshold points,therfore choosing the threshold points are very important.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/f52df3fd-c572-4469-84d8-cf19f3ed2b50)
 
 - From above diagram we have choosed the correct threshold point but still get negative delay but still our output comes before our input as shown below for the above diagram when we zoom in at the threshold point choosed.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/6bef4bb1-35b5-451f-9731-da127328b42f)
 
 **TRANSITION TIME**
 
 - to find slew of a waveform we need to do time(Slew_high_rise_thr) - time(Slew_low_rise_thr)
 - The transtion is showed below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/2f60375d-8c3a-4abc-b1b7-2d1aa9932b42)
 
+</details>
+
+# DAY-3
 
 
 
