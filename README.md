@@ -720,10 +720,9 @@ Power planning, in the context of integrated circuit (IC) design, is the process
 
 ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/c10ad79e-a303-4306-a499-7a3f5962e8f1)
 
-- apart from the deisgn view window we also have a tkcon window where we open and type `what` inside the tkcon window it shows us 
+- apart from the deisgn view window we also have a tkcon window where we open and type `what` inside the tkcon window it shows us which layer is connected to which pin and it also shows the selected metal layers.
 
-
-
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/349fb9a8-93d9-42f2-bccf-917b0744c77b)
 
 </details>
 
