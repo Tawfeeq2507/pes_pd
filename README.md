@@ -855,12 +855,16 @@ we have different tool to do both the functionalities.
 
 ### Inputs for Cell design Flow
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/c18e62cc-d646-4ba0-9ad7-71f14bb7cd11)
+
 - The above shown image is a placement and routed version of the logic synthesis step.
 - all the cells from this they are also known as standard cells, Standard cells in the context of digital integrated circuit (IC) design, are pre-designed, pre-characterized, and pre-verified electronic building blocks that represent fundamental logic functions like gates, flip-flops, and latches. These cells are typically provided by semiconductor foundries or third-party IP (intellectual property) vendors and serve as the basic building blocks for designing complex digital circuits.
 - These standard cells are placed and kept in a place called the libraries,library not only hold cells but they also hold differrent cells with different functionality and different sizes.
 - library not only holds the different shapes of the cell but also thier characteristics like threshold voltage and other variations.
 
 - lets consider a cell an inverter for us its nothing but a single input cell but for an inverter it goes through a typical steps of cell design flow.
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/cd8fe8f9-d6b9-4ac4-bbdf-082fd9a4bc1c)
 
 **CELL DESIGN FLOW**
 
@@ -875,14 +879,67 @@ we have different tool to do both the functionalities.
 - The DRC and LVC rules provides us a tech file with some rules of designing the layout or it gives design rules.
 - There are many rules the foundaries give us thousands of rules before we start designing out the cell as shown below.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/38a1b5bb-b044-44d7-92b5-0485386ce332)
 
 - SPICE modules give us the parameters while we design ex threshold voltage,linear region and saturation region formulas,etc.
 - These are the parameters that are provided by the foundry as shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/e0ec8069-a7c6-4ba6-9490-2d6be2a599b2)
+
+- The library and user defined specifications tells us the cell height and the power rail and the ground rails used inside the core of the chip as shown below:
+
+
+- The seperation between the power rail and ground rails decides the **Cell Height** and it is responsible by the library developer that the cell height cell is maintained.
 
 ### Circuit Design step
 
+##### DESIGN
 
+Circuit design is then divided into 3 steps:
+
+1)circuit design 
+
+- mostly depended upon the SPICE simulations where the standard objective is to maintain the drain current of PMOS and NMOS should be equal to 0 
+- the ouput that we get out of the circuit design is known as the CDL(Cricuit Design Language) File.
+
+2)Layout design
+
+- in layout design we try to get the PMOS and NMOS network graphs out of the implemented design.
+
+
+- The next step is to use eulers path and draw stick diagram out of it.
+- The output of the layout Design will be GDS2,LEF(defines width and height of the cell),extracted spice netlist.
+
+3)charecterisation
+
+- lets take example of the layout of a buffer as shown below:
+
+
+- we have the description of this buffer as shown below:
+
+
+- for this we have spice extracted Netlist basically whatever we have in the Layout buffer the contacts the metal layers and everything for each element will have a resistance and capacitances we have extracted them all in terms of a spiced Netlist as shown below:
+
+
+- for this we have the sub circuit file loaded, it contains the actual PMOS and NMOS models as shown below:
+
+
+- we have then read the models of PMOS and NMOS as shown above:
+  
+- The characterisation flow that is followed in the industry are:
+
+1) 1st step is to read the Models as it is the first file that comes out of the foundry
+2) 2nd step is to read the extracted spice netlist .
+3) 3rd step is to recognise the behaviour of the buffer in above case or the Logic gate we have implmented.
+4) 4th step is to read the loaded sub circuit file.
+5) 5th step is to attach the necessary power sources.
+6) 6th step is to apply the stimulus.
+7) 7th step is to provide necessary output capacitances and should be varied in a range.
+8) 8th step is to provide the necessary simulation commands.
+
+- The next procedure is to feed in all these 1 to 8 steps in form of a configuration file into the charecterisation software called as **GUNA**.
+- This software generates timing,noise,power,.lib,fucntions files.
+- therefore the characterisation gets sub divided here into timing,power,noise characterisation.
 
 
 
