@@ -847,6 +847,42 @@ we have different tool to do both the functionalities.
 
 ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/9f0c8087-b039-4d68-9328-7d1c22da48dd)
 
+</details>
+
+
+<details>
+<summary> Cell design and characterization flows</summary>
+
+### Inputs for Cell design Flow
+
+- The above shown image is a placement and routed version of the logic synthesis step.
+- all the cells from this they are also known as standard cells, Standard cells in the context of digital integrated circuit (IC) design, are pre-designed, pre-characterized, and pre-verified electronic building blocks that represent fundamental logic functions like gates, flip-flops, and latches. These cells are typically provided by semiconductor foundries or third-party IP (intellectual property) vendors and serve as the basic building blocks for designing complex digital circuits.
+- These standard cells are placed and kept in a place called the libraries,library not only hold cells but they also hold differrent cells with different functionality and different sizes.
+- library not only holds the different shapes of the cell but also thier characteristics like threshold voltage and other variations.
+
+- lets consider a cell an inverter for us its nothing but a single input cell but for an inverter it goes through a typical steps of cell design flow.
+
+**CELL DESIGN FLOW**
+
+- The cell design flow is devided into 3 steps:
+1) inputs : these are the inputs needed to design the inverter.
+2) design steps: designing of the inverter
+3) output: outputs of this inverter are the ones that are used by the EDA tools.
+
+##### INPUTS
+
+- To the design the inverter we start with PDK's(Process design kits),PDK stands for Process Design Kit. It is a set of files and documents that contain information essential for the design and manufacture of integrated circuits (ICs) or semiconductor chips. A PDK is provided by semiconductor foundries to their customers, typically IC designers, to assist in the development of ICs using their specific manufacturing processes.These kits contain the DRC and LVC rules,SPICE modules,libraries and user defined specs.
+- The DRC and LVC rules provides us a tech file with some rules of designing the layout or it gives design rules.
+- There are many rules the foundaries give us thousands of rules before we start designing out the cell as shown below.
+
+
+- SPICE modules give us the parameters while we design ex threshold voltage,linear region and saturation region formulas,etc.
+- These are the parameters that are provided by the foundry as shown below:
+
+
+### Circuit Design step
+
+
 
 
 
