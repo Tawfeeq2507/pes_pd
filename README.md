@@ -1008,7 +1008,14 @@ Circuit design is then divided into 3 steps:
 
 # DAY-3
 
+**Design library cell using Magic Layout and ngspice characterization**
 
+<details>
+<summary> Labs for CMOS inverter ngspice simulations </summary>
+
+#### I/O placer revision
+
+- 
 
 
 
