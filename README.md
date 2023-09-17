@@ -831,13 +831,21 @@ Placement in OpenLANE occurs in two stages:
 1) Global placement: one of cores placement where legalisation does not happen.Legalisation means the standard cells are placed in standard cell rows and should be abetted with each other and should have no overlaps.The main objective of global placement is to reduce the wire length.
 3) Detailed placement
 
-we have different tool to do botht the functionalities.
+we have different tool to do both the functionalities.
 
 - since global placement is to reduce the wire length in openlane we use concept of hpwl(Half permitable wire length),therefore it focuses on reducing this hpwl.
 - once we `run_placement` in openlane we see that the hpwl values converge basically the length is reducing.
 - to see the placement in openlane type `magic -T` with the required file location of the placement file.
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/05a96562-7ebd-4099-a554-63718209177a)
 
+- For detailed view of the cells we zoom inside as shown below:
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/9baae53c-3a26-4481-9371-ed3ea55a5c0d)
+
+- from rhe image shown below we can clearly see how the cells are arranged in row wise and how the placement looks like:
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/9f0c8087-b039-4d68-9328-7d1c22da48dd)
 
 
 
