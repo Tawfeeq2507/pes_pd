@@ -781,9 +781,15 @@ Now we try to solve the Problems that we encountered while placing these cells, 
 
 ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/b662d633-1f14-4c95-b884-6df0e3c7bab1)
 
+- In stage 2 we have abetted certain logic so that there is no time delay between 1 and 2 and recreating signel will not be a problem as all are close to each each.
+- The reason we have done abetment to FF1 ,1,2,FF2 of 2nd stage is because we have assumed our 2nd stage to work at a very high speed in that case we bring these set of logic very close to each other thereby having 0 delay from sending signal from FF1 to FF2 hence we have kept them together but far from thier respective ports.
+- The stage 3 is placed as shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/277c4ff6-39a0-4e1e-9576-c6ba941fc9b7)
 
+-The stage 4 is placed as shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/933e7d7d-15a0-4849-8c5b-f597343b8be1)
 
 
 
