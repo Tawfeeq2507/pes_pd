@@ -761,7 +761,8 @@ Once we have given proper shape and size and delay information of our cell using
 - we place the stage as shown below:
 
 
-- Now we try to solve the Problems that we encountered while placing these cells, the Solution for these Problems is known as **Optimize placement**.
+Now we try to solve the Problems that we encountered while placing these cells, the Solution for these Problems is known as **Optimize placement**.
+  
 - This is the stage where we do estimations where we estimate the wire length,capacitance and based on that insert **repeaters**.
 - lets consider FF1 of 2nd stage and din2 we see that capacitances between them is very huge as its huge length of wire and even the resistance as it depends on length and lenght is huge.Therefore the signal delay is high from din2 to FF1 of 2nd stage due to the distance.
 - we fix this problem by placing a **Repeater** in between Din2 and FF1 of 2nd stage to pass on the signal thereby reducing delay and buy having loss of data,therfore whatever is told to Din2 is succesfully retained by FF1 of 2nd stage and This is called **Signal Integrity**.
@@ -769,8 +770,12 @@ Once we have given proper shape and size and delay information of our cell using
 **REPEATER**
 
 - are basically buffers that will recondition the old signal and make a new signal which replicates the original signal and sends it again, in this way many repaeters are placed and signal integrity is mmaintained But at a loss of area as more and more repeaters will be used for long distances which is a trade off.
-- In the 1st stage we done need any repeaters.
-- **SLEW** is basically depended upon the value of the capacitor,higher the value of capacitor 
+- In the 1st stage we done need any repeaters,Signel Integrity is based on the wire length estimation and calculation.
+- **SLEW** is basically depended upon the value of the capacitor,higher the value of capacitor the amount of charge required to charge the capacitor will be high resulting in BAD slew.
+- In stage 2 we see that the distance was far from Din2 and FF1 of stage 2,slew is basically transmission and it goes beyond the limit in the 2nd stage and resulting it in more difficulty in reaching the FF1,therfore we add some repeaters to it as shown below:
+
+
+- 
 
 
 
