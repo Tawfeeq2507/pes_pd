@@ -701,7 +701,20 @@ Power planning, in the context of integrated circuit (IC) design, is the process
 
 - To run the floorplan on OpenLANE type `run_floorplan` in OpenLANE directory after run_synthesis and basic steps to run OpneLANE.
 - to see the actual Layout after floorplan it is first done in magic.
-- to access magic type `magic -T`
+- to access magic type `magic -T` with the directory of our deisgn file we want to access using the magic application.
+
+
+### Review floorplan layout in Magic
+
+- after opening the required file in Magic we can now try to see and reivew the floorplan.
+- to keep the the design floorplan in the middle of the screen press V.
+- to zoom in we select the part of the design we want using left to select the portion of the region we want to access and then left click to to select that region and press Z to soom inside that region.
+
+
+- apart from the deisgn view window we also have a tkcon window where we open and type `what` inside the tkcon window it shows us the 
+
+
+
 
 </details>
 
@@ -791,6 +804,29 @@ Now we try to solve the Problems that we encountered while placing these cells, 
 
 ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/933e7d7d-15a0-4849-8c5b-f597343b8be1)
 
+### Need for libraries and characterization
+
+Typical IC design flow that every design needs to go through if it wants to be implemented on a chip are:
+
+1) 1st step is the Logic synthesis,output of logic synthesis is arrangment of gates in thier original functionality that we have described using RTL.
+2) 2nd step is the Floorplanning,in this step we import the Netlist that we get out of logic synthesis and decide the size of the core and die.
+3) 3rd step is the Placement step we take the logic cells present from the logic synthesis and place it on the chip in such a manner that the initial timing is met.(ie we place the fast ones together and the ones with different functionality we keep them depending on that).
+4) 4th step is the CTS(Clock tree Synthesis), if we want the clock to be spread across the logic cells at equal time (ie: all flip flops sitting far or close apart should recieve clock at the same time) therfore in CTS we attack a tree which controls the clock for each logic cells.
+5) 5th step is the Routing stage , if we want to route each cells there are certain flow routing has to go through and it is depended on the characteristics of the cell.
+6) 6th step is the STA(static timing analysis) we do static timing analysis to find out what the setup time, hold time,maximum achivable frequency of circuit.
+
+From all these steps we see that there is one thing common and that is the **Gates oR cells** ,this is where **Library characterization** plays and imporatant role,the collection of these cells is known as library when placed in some area. we introduce these gates in a manner such that the tools understand what these gates are, we need to model them in a way that the EDA tools can understand it.
+
+### Congestion aware placement using RePlAce 
+
+Placement in OpenLANE occurs in two stages:
+1) Global placement: one of cores placement where legalisation does not happen.Legalisation means the standard cells are placed in standard cell rows and should be abetted with each other and should have no overlaps.The main objective of global placement is to reduce the wire length.
+3) Detailed placement
+
+we have different tool to do botht the functionalities.
+
+- since global placement is to reduce the wire length in openlane we use concept of hpwl(Half permitable wire length),therefore it focuses on reducing this hpwl.
+- once we `run_placement` in openlane we see that the hpwl values converge basically the length is reducing.
 
 
 
