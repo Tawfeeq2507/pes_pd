@@ -756,10 +756,12 @@ Once we have given proper shape and size and delay information of our cell using
 
 - The 3rd stage to be placed we see that FF1 needs to be connected to Din3 and FF2 to Dout 3 but the distance between them is huge hence we try to place them diagonally as shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/82fc8dd9-2f0a-45de-9ef1-52139c26b9a9)
 
 - Similarly implementing stage 4 in quite tricky as we have pre placed cells and we cant give FF1 close to Din4 therefore the distance is huge again in stage 4 as there is again a diagonally opposite I/O ports for stage 4 on the chip.
 - we place the stage as shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/7629e9c8-d647-4f0a-a8a3-d3364188d0c0)
 
 Now we try to solve the Problems that we encountered while placing these cells, the Solution for these Problems is known as **Optimize placement**.
   
@@ -770,12 +772,16 @@ Now we try to solve the Problems that we encountered while placing these cells, 
 **REPEATER**
 
 - are basically buffers that will recondition the old signal and make a new signal which replicates the original signal and sends it again, in this way many repaeters are placed and signal integrity is mmaintained But at a loss of area as more and more repeaters will be used for long distances which is a trade off.
-- In the 1st stage we done need any repeaters,Signel Integrity is based on the wire length estimation and calculation.
+- In the 1st stage we dont need any repeaters, Signel Integrity is based on the wire length estimation and calculation.
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/bd7558cb-33ee-4381-8e80-fa9573be547b)
+
 - **SLEW** is basically depended upon the value of the capacitor,higher the value of capacitor the amount of charge required to charge the capacitor will be high resulting in BAD slew.
 - In stage 2 we see that the distance was far from Din2 and FF1 of stage 2,slew is basically transmission and it goes beyond the limit in the 2nd stage and resulting it in more difficulty in reaching the FF1,therfore we add some repeaters to it as shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/b662d633-1f14-4c95-b884-6df0e3c7bab1)
 
-- 
+
 
 
 
