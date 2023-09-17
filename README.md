@@ -966,15 +966,38 @@ Circuit design is then divided into 3 steps:
 
 - The output of the waveform looks like this shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/acfe83fd-a021-4120-8971-2826dd394042)
 
 - The above waveform is to understand the Slews of thee waveform slew rise shows the red rising graph and slew fall is shown by the blue falling graph each of ther graph have high and low values.
 - similarly we have it for input rise and fall and output rise and fall, the input rise and fall is shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/6e70990b-bab6-4f63-95f4-1d7e6919c771)
 
 - The output rise and fall is shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/61d3ab57-d5cf-4a77-ac29-ae1dcec594cb)
 
-- 
+- NOTE that we are finding the waveforms only for timing stimulus that was provided in step 6
+
+### Propagation delay and transition time
+
+**PROPAGATION DELAY**
+
+- To get Delay we subtract out - In of the above graph.
+
+
+- From above graph we see that our output blue comes before our input red thats why we see negative delay here which are not expected, The reasaon behind the negative delay is poor choice of threshold points,therfore choosing the threshold points are very important.
+
+
+- From above diagram we have choosed the correct threshold point but still get negative delay but still our output comes before our input as shown below for the above diagram when we zoom in at the threshold point choosed.
+
+
+**TRANSITION TIME**
+
+- to find slew of a waveform we need to do time(Slew_high_rise_thr) - time(Slew_low_rise_thr)
+- The transtion is showed below:
+
+
 
 
 
