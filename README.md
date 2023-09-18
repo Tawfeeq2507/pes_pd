@@ -1124,17 +1124,44 @@ Circuit design is then divided into 3 steps:
 
 - we start with a simple file called as met3.mag and open it in magic as shown below:
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/3ff4aa00-f714-413d-82cf-6578d33f6dde)
+
+- we make a contact and do contact cuts on it using the command `cif see VIA2`:
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/ffb1eb70-885b-40c1-8d12-8bd61f423dbe)
+
+- we can see that it works on a 5 nm grid:
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/aa3f3ac6-d7c5-44d7-9721-9464b0c3e7f1)
 
 
 ### Lab exercise to fix poly.9 error in Sky130 tech-file
 
+- From the given poly silicon layout some of them are incorrect and we can correct them.
+- 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/5c7f3f3f-93a1-4a87-a6bd-c3328709a8f3)
 
+- Here in polysilicon 9 there is a rule violation as seen below:
 
-### Lab exercise to implement poly resistor spacing to diff and tap
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/ed872e9f-56ba-42f8-94a4-399980db5b71)
+
+- we see that there is a rule violation as between distance between one poly to another as we shown:
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/932462b3-13a1-4b47-b1d2-b7009d2ce1e0)
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/c635562b-e1f3-44ee-8a11-2a8b07408a48)
+
+- to solce this open sky130A.tech and change the *nsd to *poly
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/4e722231-bc39-453b-a56e-0f94968606cb)
 
 ### Lab challenge exercise to describe DRC error as geometrical construct 
 
-### Lab challenge to find missing or incorrect rules and fix them 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/cf8eefaf-b276-4396-a9ae-63103ec51d65)
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/befa5ea1-f2af-4a71-8644-a56fbf575e93)
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/1e98d6de-9351-4715-b32b-f4cb38785c40)
 
 </details>
 
