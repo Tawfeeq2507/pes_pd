@@ -1,4 +1,4 @@
-![image](https://github.com/VardhanSuroshi/pes_asic_class/assets/132068498/33403244-c9dd-4aef-a022-da52e2eef51c)
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/0b42aa62-709f-49f3-a6d4-dfbf8ccf74f5)![image](https://github.com/VardhanSuroshi/pes_asic_class/assets/132068498/33403244-c9dd-4aef-a022-da52e2eef51c)
 
 Welcome to my GitHub repository dedicated to VLSI Physical Design for ASICs using open-source tools.
 
@@ -1048,6 +1048,58 @@ Circuit design is then divided into 3 steps:
 
 ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/9856913e-b400-4f18-b4ef-3715ff6fef22)
 
+### CMOS Fabrication process
+
+- The CMOS (Complementary Metal-Oxide-Semiconductor) fabrication process is a complex series of steps used to create integrated circuits (ICs) on silicon wafers. These ICs are the building blocks of modern electronic devices like microprocessors, memory chips, and more. Here is an overview of the CMOS fabrication process along with links to images for each step:
+
+1) Substrate Preparation:
+
+- A high-purity silicon wafer is used as the base material. The wafer is typically circular and highly polished.
+
+2) Epitaxy (EPI):
+
+- A thin layer of single-crystal silicon is grown on the wafer's surface to improve its electrical properties. This layer will serve as the active region where transistors will be built.
+
+3) Oxidation:
+
+- The wafer is exposed to high temperatures in an oxygen-rich environment to form a layer of silicon dioxide (SiO2) on the surface. This layer acts as an insulator.
+
+4) Photolithography:
+
+- A photosensitive material (photoresist) is applied on the wafer. A mask is used to define patterns that will be transferred to the wafer.
+
+5) Etching:
+
+- Chemicals or plasma are used to selectively remove material (either silicon or oxide) from the wafer, based on the patterns defined by the mask in the previous step.
+
+6) Ion Implantation:
+
+- This step involves the introduction of dopants (like boron, phosphorus) into the silicon to alter its electrical properties, creating regions with specific conductivity characteristics.
+
+7) Deposition:
+
+- Thin films of materials like polysilicon (for gates), metal (for interconnects), and insulators (like silicon nitride) are deposited on the wafer surface.
+
+8) Annealing:
+
+- The wafer is heated to allow dopants to diffuse and activate, ensuring proper electrical behavior of the fabricated devices.
+
+9) Chemical Mechanical Polishing (CMP):
+
+- Excess material is removed by a combination of chemical and mechanical means, ensuring a smooth and planar surface.
+
+10) Contact and Via Formation:
+
+- Holes are etched to make electrical connections between different layers of the integrated circuit.
+
+11) Metallization:
+
+- Metal conductors (typically aluminum or copper) are deposited and patterned to form interconnects between transistors and other components.
+
+12) Passivation:
+
+- A final layer of insulator is deposited to protect the underlying layers and provide a smooth surface for subsequent processing.
+
 </details>
 
 <details>
@@ -1168,25 +1220,76 @@ Circuit design is then divided into 3 steps:
 # DAY-4
 
 
+<details>
+<summary> Timing modelling using delay tables </summary>
+
+### Lab steps to convert grid info to track info 
+
+to use Grid commands type `grid` in tkcon and type the values of x and y from the given refernce:
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/7cd70ac6-7555-4c49-b38a-290976bc8782)
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/435e100b-886e-467c-ab00-6e8761c235aa)
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/0ab1028c-2e97-4ec2-b2a0-246042af0275)
+
+after changing the grid we get the layout as shown below:
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/52fd8809-3893-4262-bbb4-caa8d105efca)
 
 
+### Lab steps to convert magic layout to std cell LEF
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/46acd1e4-5da4-4da8-92f0-bf3909364f70)
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/fa52e594-f308-449c-8f78-9f5d169c3ef6)
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/aee88547-ab69-45f6-8ab1-47d00346e300)
+
+</details>
 
 
+<details>
+<summary> Timing analysis with ideal clocks using openSTA </summary>
 
+### Introduction to clock jitter and uncertainity
 
+- Clock jitter and uncertainty are two important concepts in the field of electronics and signal processing, particularly in the design of digital systems. They both pertain to variations in timing, but they have distinct meanings:
 
+Clock Jitter:
 
+Definition: Clock jitter refers to the variation in the timing of a clock signal's edges (rising or falling) from their ideal positions. In other words, it's the deviation of the actual clock signal from its theoretically perfect periodic waveform.
 
+Causes: Jitter can be caused by various factors, including electronic noise, power supply fluctuations, electromagnetic interference, and imperfections in clock generation or distribution circuitry.
 
+Effects: Excessive clock jitter can lead to timing errors in digital circuits. This can cause issues such as data corruption, reduced system performance, or even failure in high-speed applications.
 
+Types:
 
+Deterministic Jitter: This type of jitter arises from known and repeatable sources, such as clock skew or crosstalk.
+Random Jitter: Random jitter is caused by unpredictable and non-reproducible sources, such as thermal noise or electronic noise.
+Measurement: Jitter is typically measured in picoseconds (ps) or femtoseconds (fs) and is characterized by parameters like peak-to-peak jitter, RMS (Root Mean Square) jitter, and deterministic jitter components.
 
+Clock Uncertainty:
 
+Definition: Clock uncertainty refers to the range of time within which the actual occurrence of a clock edge is expected to fall. It accounts for both deterministic factors (like clock skew) and random factors (like jitter).
 
+Causes: Clock uncertainty is influenced by various factors, including the precision of clock generation, distribution circuitry, and the characteristics of the clock signal's propagation path.
 
+Effects: Large clock uncertainty can lead to timing violations and errors in digital circuits, particularly in synchronous systems where components rely on a shared clock.
 
+Measurement: Clock uncertainty is typically measured in picoseconds (ps) or fractions of a clock period. It's an important parameter in ensuring proper synchronization in digital systems.
 
+</details>
 
+<details>
+<summary> Clock tree synthesis TritonCTS and signal integrity </summary>
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/4fbb231f-b92b-4a34-a547-c5cdccb37225)
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/d4004427-e85e-4ee8-bdfc-7ebee299092d)
+
+</details>
 
 
 
