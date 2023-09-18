@@ -1058,6 +1058,35 @@ Circuit design is then divided into 3 steps:
 
 </details>
 
+<details>
+<summary> Inception of Layout A CMOS fabrication process</summary>
+
+### Create Active regions 
+
+### Formation of N-well and P-well
+
+### Formation of gate terminal 
+
+### Lightly doped drain (LDD) formation
+
+### Source A drain formation
+
+### Local interconnect formation 
+
+### Higher level metal formation 
+
+### Lab introduction to Sky130 basic layers layout and LEF using inverter
+
+
+- as we from the above image run in magic of a an inverter we have pmos and nmos with source and drain.
+- The colours that we see above rede blue and green are the standard indication of polusilicon,metal and etc. we have different colours for different metal.
+- the above shown image is just the layout design.
+- we do layout design using certain design rules which ic crucial to make the layout designs of a circuit.
+
+### Lab steps to create std cell layout and extract spice netlist
+
+
+
 
 
 
