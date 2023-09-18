@@ -1080,8 +1080,33 @@ Circuit design is then divided into 3 steps:
 
 </details>
 
+<details>
+<summary>  Sky130 Tech File Labs</summary>
+
+### Lab steps to create final SPICE deck using Sky130 tech 
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/bd17c2c1-fa4d-4a71-bc2a-3e391165516b)
+
+- from this file we can see the contents of pmos and nmos as shown as pshort and nshort.
+- Y is gate A is drain and then we source followed by the substrate.
+- 
 
 
+### Lab steps to characterize inverter using sky130 model files 
+
+### Lab introduction to Magic tool options and DRC rules 
+
+### Lab introduction to Sky130 pdk's and steps to download labs
+
+### Lab introduction to Magic and steps to load Sky130 tech-rules
+
+### Lab exercise to fix poly.9 error in Sky130 tech-file
+
+### Lab exercise to implement poly resistor spacing to diff and tap
+
+### Lab challenge exercise to describe DRC error as geometrical construct 
+
+### Lab challenge to find missing or incorrect rules and fix them 
 
 
 
