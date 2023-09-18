@@ -1033,14 +1033,6 @@ Circuit design is then divided into 3 steps:
 
 ![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/a9f83086-7163-4848-b959-83a44b76ba11)
 
-### SPICE deck creation for CMOS inverter
-
-### SPICE simulation lab for CMOS inverter 
-
-### Switching Threshold Vm
-
-### Static and dynamic simulation of CMOS inverter
-
 ### Lab steps to git clone vsdstdcelldesign 
 
 - In this lab session we will be gitcloning doc files for pmos and nmos spice models
@@ -1061,29 +1053,34 @@ Circuit design is then divided into 3 steps:
 <details>
 <summary> Inception of Layout A CMOS fabrication process</summary>
 
-### Create Active regions 
-
-### Formation of N-well and P-well
-
-### Formation of gate terminal 
-
-### Lightly doped drain (LDD) formation
-
-### Source A drain formation
-
-### Local interconnect formation 
-
-### Higher level metal formation 
-
 ### Lab introduction to Sky130 basic layers layout and LEF using inverter
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/9856913e-b400-4f18-b4ef-3715ff6fef22)
 
 - as we from the above image run in magic of a an inverter we have pmos and nmos with source and drain.
 - The colours that we see above rede blue and green are the standard indication of polusilicon,metal and etc. we have different colours for different metal.
 - the above shown image is just the layout design.
 - we do layout design using certain design rules which ic crucial to make the layout designs of a circuit.
+- it shows the connections between the pmos and nmos and how the drain and source are connected to them.
+- it also represents how the layers and design rules have been followed in order to design the circuit.
 
 ### Lab steps to create std cell layout and extract spice netlist
+
+- to extract the netlist to our current file directory type `extract all` and then we do `ext2spice cthresh 0 rthresh 0`
+- Doing this will extract all the parasetic capacitances also.
+- we next type `ext2spice` to extract spice netlist and create std cell.
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/189f7452-973c-4d7c-8cd6-52720a4d9c4e)
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/70a05d39-4d80-4f5d-9d95-cb2d05932531)
+
+- we see what the spice file contains as shown below:
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/bd17c2c1-fa4d-4a71-bc2a-3e391165516b)
+
+</details>
+
+
 
 
 
