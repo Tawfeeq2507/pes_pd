@@ -1085,11 +1085,10 @@ Circuit design is then divided into 3 steps:
 
 ### Lab steps to create final SPICE deck using Sky130 tech 
 
-![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/bd17c2c1-fa4d-4a71-bc2a-3e391165516b)
+
 
 - from this file we can see the contents of pmos and nmos as shown as pshort and nshort.
 - Y is gate A is drain and then we source followed by the substrate.
-- 
 
 
 ### Lab steps to characterize inverter using sky130 model files 
