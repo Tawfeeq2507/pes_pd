@@ -1013,14 +1013,50 @@ Circuit design is then divided into 3 steps:
 <details>
 <summary> Labs for CMOS inverter ngspice simulations </summary>
 
-#### I/O placer revision
+### I/O placer revision
 
 - 4 strategies supported by the I/O placer.
 - I/O placer is one of the open source EDA tools that is used to place around the core.
-- 
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/18b8b0e0-cb5d-46d7-880c-825361760e78)
 
+- Here in above image we see that all the I/O pins are located at output equidistant of each other.
+- to view the floorplan mode we can go to `floorplan.tcl`
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/0d7cbed0-21e0-4109-b871-ea59c395efae)
+
+- we try to modify the floorplan by changing the mode to 2.
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/efb14c69-2f2a-483f-a1fa-ed58d62b3a32)
+
+- after modify run floorplan, we get a structure of I/O pins which are stacked on top of each other.
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/a9f83086-7163-4848-b959-83a44b76ba11)
+
+### SPICE deck creation for CMOS inverter
+
+### SPICE simulation lab for CMOS inverter 
+
+### Switching Threshold Vm
+
+### Static and dynamic simulation of CMOS inverter
+
+### Lab steps to git clone vsdstdcelldesign 
+
+- In this lab session we will be gitcloning doc files for pmos and nmos spice models
+- after git cloning it creates a vsdstandard cell design file in openlane.
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/10fb0419-3696-4d50-8baa-57d2c4ea0fc7)
+
+- we copy the sky130A.tech file to the vsdstddesign file to make it easier to run and type magic -T sky130A.tech and the mag file which is inverter.
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/04a06c22-2110-48b7-bb8a-ef446f4a80ac)
+
+- when seen in magic it looks like something shown below:
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/9856913e-b400-4f18-b4ef-3715ff6fef22)
+
+</details>
 
 
 
