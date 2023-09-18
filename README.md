@@ -1085,13 +1085,22 @@ Circuit design is then divided into 3 steps:
 
 ### Lab steps to create final SPICE deck using Sky130 tech 
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/6cd12d57-127a-497d-a9e8-d5f4e063367b)
 
-
-- from this file we can see the contents of pmos and nmos as shown as pshort and nshort.
+- from this file we can see the contents of pmos and nmos as shown.
 - Y is gate A is drain and then we source followed by the substrate.
 
+- we modify this by mentioning the transition times and the various parameters of ground and source as shown below:
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/531ad72b-aa92-4bf1-9184-15d646354b94)
+
+- we now run this file using ngspice:
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/b95eb787-d453-4101-b3ce-fc3492f6c177)
 
 ### Lab steps to characterize inverter using sky130 model files 
+
+
 
 ### Lab introduction to Magic tool options and DRC rules 
 
