@@ -1015,6 +1015,8 @@ Circuit design is then divided into 3 steps:
 
 #### I/O placer revision
 
+- 4 strategies supported by the I/O placer.
+- I/O placer is one of the open source EDA tools that is used to place around the core.
 - 
 
 
