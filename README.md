@@ -1100,21 +1100,45 @@ Circuit design is then divided into 3 steps:
 
 ### Lab steps to characterize inverter using sky130 model files 
 
+- we need to plot output vs time in ngspice
 
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/4d468e73-9762-480b-b24f-308499cbab74)
 
-### Lab introduction to Magic tool options and DRC rules 
+- we now try to change y parameters we see the change in output plots as shown below:
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/5bdc1bbf-86d8-473e-86a0-2add64ace52e)
+
+- we see that the output y red line is slightly shifted we can see this by zooming into it as shown below:
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/4c7196be-7457-4c36-a2c6-0e165726d980)
 
 ### Lab introduction to Sky130 pdk's and steps to download labs
 
+- we download the tech files of the labs using the command `wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz` which we will be using in magic as shown below:
+
+![image](https://github.com/Tawfeeq2507/pes_pd/assets/142083027/333ab518-1d2d-40e8-8cf5-9e527f1fe76b)
+
+- these are tar files that contain the tech files for the magic labs.
+
 ### Lab introduction to Magic and steps to load Sky130 tech-rules
 
+- we start with a simple file called as met3.mag and open it in magic as shown below:
+
+
+
 ### Lab exercise to fix poly.9 error in Sky130 tech-file
+
+
 
 ### Lab exercise to implement poly resistor spacing to diff and tap
 
 ### Lab challenge exercise to describe DRC error as geometrical construct 
 
 ### Lab challenge to find missing or incorrect rules and fix them 
+
+</details>
+
+# DAY-4
 
 
 
